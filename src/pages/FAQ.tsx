@@ -18,10 +18,10 @@ const FAQ = () => (
   <div>
     <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 md:py-24">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="text-3xl font-bold md:text-5xl mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        <h1 className="opacity-0 animate-fade-in text-3xl font-bold md:text-5xl mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
           Frequently Asked Questions
         </h1>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="opacity-0 animate-fade-in-delay-1 text-muted-foreground max-w-xl mx-auto">
           Everything you need to know about applying to BIYU AI Agency.
         </p>
       </div>
@@ -29,7 +29,7 @@ const FAQ = () => (
 
     <section className="py-12 md:py-20">
       <div className="container mx-auto max-w-2xl px-4">
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full animate-stagger">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
               <AccordionTrigger className="text-left">{faq.q}</AccordionTrigger>
