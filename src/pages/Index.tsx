@@ -12,8 +12,8 @@ const highlights = [
 const Index = () => (
   <div>
     {/* Hero */}
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10 py-24 md:py-36">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(var(--primary)/0.15),transparent)]" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-accent/10 via-background to-primary/10 py-24 md:py-36">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(35_50%_50%/0.12),transparent)]" />
       <div className="container relative mx-auto px-4 text-center">
         <div className="opacity-0 animate-fade-in inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary mb-6">
           <Brain className="h-4 w-4 animate-float" />
@@ -69,12 +69,12 @@ const Index = () => (
     </section>
 
     {/* CTA */}
-    <section className="bg-gradient-to-r from-primary to-accent py-16 md:py-20">
+    <section className="bg-accent py-16 md:py-20">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="opacity-0 animate-fade-in text-3xl font-bold text-primary-foreground md:text-4xl mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        <h2 className="opacity-0 animate-fade-in text-3xl font-bold text-accent-foreground md:text-4xl mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
           Ready to Shape the Future of AI?
         </h2>
-        <p className="opacity-0 animate-fade-in-delay-1 text-primary-foreground/80 mb-8 max-w-lg mx-auto">
+        <p className="opacity-0 animate-fade-in-delay-1 text-accent-foreground/70 mb-8 max-w-lg mx-auto">
           Submit your application today and join a team that's redefining what's possible with artificial intelligence.
         </p>
         <Button asChild size="lg" variant="secondary" className="opacity-0 animate-fade-in-delay-2 gap-2 px-8 text-base hover-scale">

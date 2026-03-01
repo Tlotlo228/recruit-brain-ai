@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import biyuLogo from "@/assets/biyu-logo.jpeg";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -19,12 +20,12 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="flex items-center gap-2 font-bold text-xl" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Zap className="h-5 w-5" />
+        <Link to="/" className="flex items-center gap-2.5 font-bold text-xl" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+          <img src={biyuLogo} alt="BIYU AI Agency" className="h-10 w-10 rounded-lg object-cover" />
+          <div className="flex items-baseline gap-1">
+            <span className="text-foreground">BIYU</span>
+            <span className="text-primary">AI</span>
           </div>
-          <span className="text-foreground">BIYU</span>
-          <span className="text-primary">AI</span>
         </Link>
 
         {/* Desktop */}
