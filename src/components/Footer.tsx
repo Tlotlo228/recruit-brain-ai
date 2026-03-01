@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap } from "lucide-react";
+import biyuLogo from "@/assets/biyu-logo.jpeg";
 
 const Footer = () => (
   <footer className="border-t border-border bg-card">
@@ -7,9 +7,7 @@ const Footer = () => (
       <div className="grid gap-8 md:grid-cols-3">
         <div>
           <Link to="/" className="flex items-center gap-2 font-bold text-lg mb-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Zap className="h-4 w-4" />
-            </div>
+            <img src={biyuLogo} alt="BIYU AI Agency" className="h-8 w-8 rounded-lg object-cover" />
             <span>BIYU AI</span>
           </Link>
           <p className="text-sm text-muted-foreground max-w-xs">
