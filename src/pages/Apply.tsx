@@ -145,7 +145,7 @@ const Apply = () => {
                   <FormField control={form.control} name="phone" render={({ field }) => (
                     <FormItem>
                       <FormLabel>Phone *</FormLabel>
-                      <FormControl><Input type="tel" placeholder="+1 (555) 000-0000" {...field} /></FormControl>
+                      <FormControl><Input type="tel" placeholder="+267 7X XXX XXX" {...field} /></FormControl>
                       <FormMessage />
                     </FormItem>
                   )} />
