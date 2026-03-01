@@ -39,7 +39,7 @@ const FAQ = () => (
         </Accordion>
 
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-4">Still have questions? Reach out at careers@biyuai.agency</p>
+          <p className="text-muted-foreground mb-4">Still have questions? Reach out at info.biyu.ai@gmail.com</p>
           <Button asChild className="gap-2">
             <Link to="/apply">Apply Now <ArrowRight className="h-4 w-4" /></Link>
           </Button>

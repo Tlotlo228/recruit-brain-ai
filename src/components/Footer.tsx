@@ -32,8 +32,9 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold mb-3 text-sm" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Contact</h4>
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p>careers@biyuai.agency</p>
-            <p>San Francisco, CA</p>
+            <p>info.biyu.ai@gmail.com</p>
+            <p>Gaborone, Botswana</p>
+            <p>Francistown, Botswana</p>
           </div>
         </div>
       </div>
