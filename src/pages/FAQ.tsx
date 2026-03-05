@@ -42,7 +42,7 @@ const FAQ = () => (
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">Still have questions? Reach out at info.biyu.ai@gmail.com</p>
           <MagneticButton>
-            <Button asChild className="gap-2 group">
+            <Button asChild className="btn-3d-glow gap-2 group">
               <Link to="/apply">Apply Now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
             </Button>
           </MagneticButton>

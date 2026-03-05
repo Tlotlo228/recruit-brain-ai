@@ -4,6 +4,9 @@ import { ArrowRight, Brain, Users, Rocket, Shield } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
 import GlowCard from "@/components/GlowCard";
 import RoboticToggle from "@/components/RoboticToggle";
+import ParticleNetwork from "@/components/ParticleNetwork";
+import Typewriter from "@/components/Typewriter";
+import WavingRobot from "@/components/WavingRobot";
 
 const highlights = [
   { icon: Brain, title: "AI-First Culture", desc: "Work with cutting-edge AI tools and shape the future of intelligent automation." },
@@ -16,13 +19,9 @@ const Index = () => (
   <div>
     {/* Hero */}
     <section className="relative overflow-hidden bg-gradient-to-br from-accent/10 via-background to-primary/10 py-24 md:py-36">
+      <ParticleNetwork />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(35_50%_50%/0.12),transparent)]" />
-      {/* Animated grid lines */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(35 50% 50%) 1px, transparent 1px), linear-gradient(90deg, hsl(35 50% 50%) 1px, transparent 1px)",
-        backgroundSize: "60px 60px",
-      }} />
-      <div className="container relative mx-auto px-4 text-center">
+      <div className="container relative z-10 mx-auto px-4 text-center">
         <div className="opacity-0 animate-fade-in inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary mb-6">
           <Brain className="h-4 w-4 animate-float" />
           Now Hiring AI Specialists
@@ -30,7 +29,7 @@ const Index = () => (
         <h1 className="opacity-0 animate-fade-in-delay-1 mx-auto max-w-3xl text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
           Join Our Team as an{" "}
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            AI Specialist
+            <Typewriter text="AI Specialist" speed={100} />
           </span>
         </h1>
         <p className="opacity-0 animate-fade-in-delay-2 mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
@@ -39,17 +38,16 @@ const Index = () => (
         </p>
         <div className="opacity-0 animate-fade-in-delay-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <MagneticButton strength={0.4}>
-            <Button asChild size="lg" className="gap-2 px-8 text-base relative overflow-hidden group">
+            <Button asChild size="lg" className="btn-3d-glow gap-2 px-8 text-base relative overflow-hidden group">
               <Link to="/apply">
                 <span className="relative z-10 flex items-center gap-2">
                   Apply Now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
             </Button>
           </MagneticButton>
           <MagneticButton strength={0.3}>
-            <Button asChild variant="outline" size="lg" className="px-8 text-base group">
+            <Button asChild variant="outline" size="lg" className="btn-3d-outline px-8 text-base group">
               <Link to="/about">
                 <span className="transition-colors group-hover:text-primary">Learn More</span>
               </Link>
@@ -57,12 +55,15 @@ const Index = () => (
           </MagneticButton>
         </div>
 
-        {/* Robotic toggles dashboard */}
-        <div className="opacity-0 animate-fade-in-delay-3 mt-16 flex items-center justify-center gap-8 flex-wrap">
-          <RoboticToggle label="Neural Net" active />
-          <RoboticToggle label="Deep Learn" />
-          <RoboticToggle label="Auto ML" active />
-          <RoboticToggle label="Vision AI" />
+        {/* Robotic toggles dashboard with waving robot */}
+        <div className="relative opacity-0 animate-fade-in-delay-3 mt-16">
+          <WavingRobot />
+          <div className="flex items-center justify-center gap-8 flex-wrap relative z-20">
+            <RoboticToggle label="Neural Net" active />
+            <RoboticToggle label="Deep Learn" />
+            <RoboticToggle label="Auto ML" active />
+            <RoboticToggle label="Vision AI" />
+          </div>
         </div>
       </div>
     </section>
@@ -100,7 +101,7 @@ const Index = () => (
           Submit your application today and join a team that's redefining what's possible with artificial intelligence.
         </p>
         <MagneticButton strength={0.35}>
-          <Button asChild size="lg" variant="secondary" className="opacity-0 animate-fade-in-delay-2 gap-2 px-8 text-base group">
+          <Button asChild size="lg" variant="secondary" className="btn-3d-outline opacity-0 animate-fade-in-delay-2 gap-2 px-8 text-base group">
             <Link to="/apply">
               Start Your Application <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
