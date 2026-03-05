@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Brain, Users, Rocket, Shield } from "lucide-react";
+import MagneticButton from "@/components/MagneticButton";
+import GlowCard from "@/components/GlowCard";
+import RoboticToggle from "@/components/RoboticToggle";
 
 const highlights = [
   { icon: Brain, title: "AI-First Culture", desc: "Work with cutting-edge AI tools and shape the future of intelligent automation." },
@@ -14,6 +17,11 @@ const Index = () => (
     {/* Hero */}
     <section className="relative overflow-hidden bg-gradient-to-br from-accent/10 via-background to-primary/10 py-24 md:py-36">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(35_50%_50%/0.12),transparent)]" />
+      {/* Animated grid lines */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: "linear-gradient(hsl(35 50% 50%) 1px, transparent 1px), linear-gradient(90deg, hsl(35 50% 50%) 1px, transparent 1px)",
+        backgroundSize: "60px 60px",
+      }} />
       <div className="container relative mx-auto px-4 text-center">
         <div className="opacity-0 animate-fade-in inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary mb-6">
           <Brain className="h-4 w-4 animate-float" />
@@ -30,14 +38,31 @@ const Index = () => (
           that transform businesses worldwide.
         </p>
         <div className="opacity-0 animate-fade-in-delay-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild size="lg" className="gap-2 px-8 text-base hover-scale">
-            <Link to="/apply">
-              Apply Now <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="px-8 text-base hover-scale">
-            <Link to="/about">Learn More</Link>
-          </Button>
+          <MagneticButton strength={0.4}>
+            <Button asChild size="lg" className="gap-2 px-8 text-base relative overflow-hidden group">
+              <Link to="/apply">
+                <span className="relative z-10 flex items-center gap-2">
+                  Apply Now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Link>
+            </Button>
+          </MagneticButton>
+          <MagneticButton strength={0.3}>
+            <Button asChild variant="outline" size="lg" className="px-8 text-base group">
+              <Link to="/about">
+                <span className="transition-colors group-hover:text-primary">Learn More</span>
+              </Link>
+            </Button>
+          </MagneticButton>
+        </div>
+
+        {/* Robotic toggles dashboard */}
+        <div className="opacity-0 animate-fade-in-delay-3 mt-16 flex items-center justify-center gap-8 flex-wrap">
+          <RoboticToggle label="Neural Net" active />
+          <RoboticToggle label="Deep Learn" />
+          <RoboticToggle label="Auto ML" active />
+          <RoboticToggle label="Vision AI" />
         </div>
       </div>
     </section>
@@ -53,16 +78,13 @@ const Index = () => (
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 animate-stagger">
           {highlights.map((h) => (
-            <div
-              key={h.title}
-              className="group rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1"
-            >
+            <GlowCard key={h.title}>
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
                 <h.icon className="h-6 w-6" />
               </div>
               <h3 className="font-semibold text-lg mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{h.title}</h3>
               <p className="text-sm text-muted-foreground">{h.desc}</p>
-            </div>
+            </GlowCard>
           ))}
         </div>
       </div>
@@ -77,11 +99,13 @@ const Index = () => (
         <p className="opacity-0 animate-fade-in-delay-1 text-accent-foreground/70 mb-8 max-w-lg mx-auto">
           Submit your application today and join a team that's redefining what's possible with artificial intelligence.
         </p>
-        <Button asChild size="lg" variant="secondary" className="opacity-0 animate-fade-in-delay-2 gap-2 px-8 text-base hover-scale">
-          <Link to="/apply">
-            Start Your Application <ArrowRight className="h-4 w-4" />
-          </Link>
-        </Button>
+        <MagneticButton strength={0.35}>
+          <Button asChild size="lg" variant="secondary" className="opacity-0 animate-fade-in-delay-2 gap-2 px-8 text-base group">
+            <Link to="/apply">
+              Start Your Application <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        </MagneticButton>
       </div>
     </section>
   </div>
