@@ -219,7 +219,7 @@ const Apply = () => {
                 )} />
 
                 <MagneticButton className="w-full" strength={0.2}>
-                  <Button type="submit" size="lg" className="w-full group relative overflow-hidden" disabled={submitting}>
+                  <Button type="submit" size="lg" className="btn-3d-glow w-full group relative overflow-hidden" disabled={submitting}>
                     {submitting ? (
                       <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</>
                     ) : (
