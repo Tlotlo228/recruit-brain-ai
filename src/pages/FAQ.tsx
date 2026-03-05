@@ -2,6 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import MagneticButton from "@/components/MagneticButton";
 
 const faqs = [
   { q: "What roles are currently open?", a: "We're actively hiring AI Specialists who have experience with machine learning, NLP, computer vision, or AI product management. Check the Apply page for full details." },
@@ -40,9 +41,11 @@ const FAQ = () => (
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">Still have questions? Reach out at info.biyu.ai@gmail.com</p>
-          <Button asChild className="gap-2">
-            <Link to="/apply">Apply Now <ArrowRight className="h-4 w-4" /></Link>
-          </Button>
+          <MagneticButton>
+            <Button asChild className="gap-2 group">
+              <Link to="/apply">Apply Now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
+            </Button>
+          </MagneticButton>
         </div>
       </div>
     </section>

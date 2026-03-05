@@ -10,6 +10,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2, Upload } from "lucide-react";
+import MagneticButton from "@/components/MagneticButton";
 
 const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
 
@@ -217,9 +218,15 @@ const Apply = () => {
                   </FormItem>
                 )} />
 
-                <Button type="submit" size="lg" className="w-full" disabled={submitting}>
-                  {submitting ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</> : "Submit Application"}
-                </Button>
+                <MagneticButton className="w-full" strength={0.2}>
+                  <Button type="submit" size="lg" className="w-full group relative overflow-hidden" disabled={submitting}>
+                    {submitting ? (
+                      <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</>
+                    ) : (
+                      <span className="flex items-center gap-2">Submit Application <span className="transition-transform group-hover:translate-x-1">→</span></span>
+                    )}
+                  </Button>
+                </MagneticButton>
               </form>
             </Form>
           </CardContent>
