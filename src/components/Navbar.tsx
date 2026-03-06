@@ -8,7 +8,9 @@ import biyuLogo from "@/assets/biyu-logo.jpeg";
 
 const navLinks = [
   { to: "/", label: "Home" },
+  { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
+  { to: "/portfolio", label: "Portfolio" },
   { to: "/faq", label: "FAQ" },
 ];
 
@@ -29,7 +31,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -51,7 +53,7 @@ const Navbar = () => {
             <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           </button>
           <Button asChild className="btn-3d-glow">
-            <Link to="/apply">Apply Now</Link>
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
 
@@ -88,7 +90,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Button asChild className="w-full">
-            <Link to="/apply" onClick={() => setOpen(false)}>Apply Now</Link>
+            <Link to="/contact" onClick={() => setOpen(false)}>Contact Us</Link>
           </Button>
         </div>
       )}
