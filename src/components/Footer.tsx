@@ -19,9 +19,11 @@ const Footer = () => (
           <div className="space-y-2">
             {[
               { to: "/", label: "Home" },
-              { to: "/apply", label: "Apply" },
+              { to: "/services", label: "Services" },
               { to: "/about", label: "About" },
+              { to: "/portfolio", label: "Portfolio" },
               { to: "/faq", label: "FAQ" },
+              { to: "/contact", label: "Contact" },
             ].map((l) => (
               <Link key={l.to} to={l.to} className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                 {l.label}
