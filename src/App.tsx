@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import Testimonials from "./pages/Testimonials";
 import Apply from "./pages/Apply";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
@@ -17,7 +18,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+  <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/apply" element={<Apply />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
