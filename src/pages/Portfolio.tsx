@@ -148,7 +148,7 @@ const Portfolio = () => (
                 <div>
                   <h3 className="font-bold text-lg leading-tight">{p.title}</h3>
                   <p className="text-sm text-muted-foreground">{p.subtitle}</p>
-                  <span className="inline-flex items-center gap-1.5 mt-1 rounded-full bg-emerald-500/10 text-emerald-400 px-2.5 py-0.5 text-xs font-medium">
+                  <span className="inline-flex items-center gap-1.5 mt-1 rounded-full bg-primary/10 text-primary px-2.5 py-0.5 text-xs font-medium">
                     📅 {p.stat} {p.statLabel}
                   </span>
                 </div>
