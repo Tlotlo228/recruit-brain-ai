@@ -82,9 +82,7 @@ const About = () => (
             <GlowCard key={founder.name} className="text-center">
               {/* Photo placeholder */}
               <div className="mx-auto mb-6 h-40 w-40 rounded-full border-4 border-primary/20 bg-muted flex items-center justify-center overflow-hidden">
-                <span className="text-4xl font-bold text-primary/40">
-                  {founder.name.split(" ").map(n => n[0]).join("")}
-                </span>
+                <img src={founder.photo} alt={founder.name} className="h-full w-full object-cover" />
               </div>
               <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
               <p className="text-sm text-primary font-medium mb-4">{founder.role}</p>

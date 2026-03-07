@@ -78,7 +78,7 @@ const Contact = () => {
             <div className="md:col-span-3">
               <GlowCard>
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name</Label>
