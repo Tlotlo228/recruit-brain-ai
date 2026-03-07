@@ -15,12 +15,14 @@ const founders = [
   {
     name: "Tlotlo Johane",
     role: "Co-Founder & Technical Lead",
+    photo: tlotloPhoto,
     bio: "Tlotlo is the technical backbone of BIYU AI. With deep expertise in AI development, automation workflows, and full-stack engineering, he architects and builds the intelligent systems that power our client solutions. From custom AI chatbots to complex automation pipelines, Tlotlo turns ambitious ideas into working products.",
     specialties: ["AI Development", "Automation", "Full-Stack Engineering", "System Architecture"],
   },
   {
     name: "Daudi Soniya",
     role: "Co-Founder & Strategy Lead",
+    photo: daudiPhoto,
     bio: "Daudi drives the strategic vision and client relationships at BIYU AI. With a sharp eye for market opportunities and a passion for AI-powered business transformation, he leads consulting engagements, marketing strategy, and client success — ensuring every solution delivers real business value.",
     specialties: ["AI Consulting", "Marketing Strategy", "Business Development", "Client Success"],
   },
