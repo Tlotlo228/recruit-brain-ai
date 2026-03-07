@@ -16,6 +16,7 @@ const founders = [
     name: "Tlotlo Johane",
     role: "Co-Founder & Technical Lead",
     photo: tlotloPhoto,
+    linkedin: "https://www.linkedin.com/in/tlotlojohane",
     bio: "Tlotlo is the technical backbone of BIYU AI. With deep expertise in AI development, automation workflows, and full-stack engineering, he architects and builds the intelligent systems that power our client solutions. From custom AI chatbots to complex automation pipelines, Tlotlo turns ambitious ideas into working products.",
     specialties: ["AI Development", "Automation", "Full-Stack Engineering", "System Architecture"],
   },
@@ -23,6 +24,7 @@ const founders = [
     name: "Daudi Soniya",
     role: "Co-Founder & Strategy Lead",
     photo: daudiPhoto,
+    linkedin: "https://www.linkedin.com/in/daudi-soniya-said-msonda-16030b28b",
     bio: "Daudi drives the strategic vision and client relationships at BIYU AI. With a sharp eye for market opportunities and a passion for AI-powered business transformation, he leads consulting engagements, marketing strategy, and client success — ensuring every solution delivers real business value.",
     specialties: ["AI Consulting", "Marketing Strategy", "Business Development", "Client Success"],
   },
@@ -85,7 +87,10 @@ const About = () => (
                 <img src={founder.photo} alt={founder.name} className="h-full w-full object-cover" />
               </div>
               <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
-              <p className="text-sm text-primary font-medium mb-4">{founder.role}</p>
+              <p className="text-sm text-primary font-medium mb-2">{founder.role}</p>
+              <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mb-4">
+                <Linkedin className="h-4 w-4" /> LinkedIn
+              </a>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">{founder.bio}</p>
               <div className="flex flex-wrap justify-center gap-2">
                 {founder.specialties.map((s) => (
