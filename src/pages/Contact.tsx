@@ -5,21 +5,30 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import GlowCard from "@/components/GlowCard";
 import MagneticButton from "@/components/MagneticButton";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!formRef.current) return;
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+    emailjs
+      .sendForm("service_xtaknap", "template_a9gbrvy", formRef.current, "LMotMXqMW84OY7Npb")
+      .then(() => {
+        setLoading(false);
+        toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
+        formRef.current?.reset();
+      })
+      .catch(() => {
+        setLoading(false);
+        toast({ title: "Error", description: "Failed to send message. Please try again.", variant: "destructive" });
+      });
   };
 
   return (
@@ -69,7 +78,7 @@ const Contact = () => {
             <div className="md:col-span-3">
               <GlowCard>
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name</Label>
