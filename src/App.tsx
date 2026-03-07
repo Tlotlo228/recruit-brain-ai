@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import Testimonials from "./pages/Testimonials";
 import Apply from "./pages/Apply";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
