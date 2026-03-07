@@ -1,4 +1,6 @@
 import { Brain, Target, Heart, Globe, Linkedin, Mail } from "lucide-react";
+import tlotloPhoto from "@/assets/tlotlo.png";
+import daudiPhoto from "@/assets/daudi.jpg";
 import GlowCard from "@/components/GlowCard";
 import RoboticToggle from "@/components/RoboticToggle";
 
