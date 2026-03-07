@@ -87,7 +87,10 @@ const About = () => (
                 <img src={founder.photo} alt={founder.name} className="h-full w-full object-cover" />
               </div>
               <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
-              <p className="text-sm text-primary font-medium mb-4">{founder.role}</p>
+              <p className="text-sm text-primary font-medium mb-2">{founder.role}</p>
+              <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mb-4">
+                <Linkedin className="h-4 w-4" /> LinkedIn
+              </a>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">{founder.bio}</p>
               <div className="flex flex-wrap justify-center gap-2">
                 {founder.specialties.map((s) => (

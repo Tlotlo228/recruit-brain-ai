@@ -38,6 +38,9 @@ const Footer = () => (
             <p>info.biyu.ai@gmail.com</p>
             <p>Gaborone, Botswana</p>
             <p>Francistown, Botswana</p>
+            <a href="https://www.linkedin.com/in/biyu-ai-817037382" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-primary transition-colors mt-2">
+              <Linkedin className="h-4 w-4" /> LinkedIn
+            </a>
           </div>
         </div>
       </div>
