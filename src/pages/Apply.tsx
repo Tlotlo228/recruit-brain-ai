@@ -10,6 +10,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2, Upload } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import MagneticButton from "@/components/MagneticButton";
 
 const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
@@ -29,7 +30,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const WEBHOOK_URL = "https://olwame.app.n8n.cloud/webhook-test/93fd2201-67fb-4e0f-8421-b18ca8aca04f";
+
 
 const Apply = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -72,13 +73,11 @@ const Apply = () => {
         ...data,
         resumeFileName: resumeFile.name,
         resumeFileSize: resumeFile.size,
-        submittedAt: new Date().toISOString(),
       };
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+      const { error } = await supabase.functions.invoke("submit-application", {
+        body: payload,
       });
+      if (error) throw error;
       setSubmitted(true);
     } catch {
       toast({
