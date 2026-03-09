@@ -10,6 +10,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2, Upload } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import MagneticButton from "@/components/MagneticButton";
 
 const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
