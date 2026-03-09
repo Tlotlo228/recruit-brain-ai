@@ -33,17 +33,15 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setLoading(true);
     try {
-      await emailjs.send(
-        "service_xtaknap",
-        "template_w86c77j",
-        {
+      const { data: response, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
           from_name: data.name,
           from_email: data.email,
           subject: data.subject,
           message: data.message,
         },
-        "LMotMXqMW84OY7Npb"
-      );
+      });
+      if (error) throw error;
       toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
       form.reset();
     } catch {

@@ -73,13 +73,11 @@ const Apply = () => {
         ...data,
         resumeFileName: resumeFile.name,
         resumeFileSize: resumeFile.size,
-        submittedAt: new Date().toISOString(),
       };
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+      const { error } = await supabase.functions.invoke("submit-application", {
+        body: payload,
       });
+      if (error) throw error;
       setSubmitted(true);
     } catch {
       toast({
