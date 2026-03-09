@@ -19,7 +19,7 @@ const Contact = () => {
     if (!formRef.current) return;
     setLoading(true);
     emailjs
-      .sendForm("service_xtaknap", "template_a9gbrvy", formRef.current, "LMotMXqMW84OY7Npb")
+      .sendForm("service_xtaknap", "template_w86c77j", formRef.current, "LMotMXqMW84OY7Npb")
       .then(() => {
         setLoading(false);
         toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
