@@ -30,7 +30,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const WEBHOOK_URL = "https://olwame.app.n8n.cloud/webhook-test/93fd2201-67fb-4e0f-8421-b18ca8aca04f";
+
 
 const Apply = () => {
   const [submitted, setSubmitted] = useState(false);
