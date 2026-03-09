@@ -1,34 +1,56 @@
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import GlowCard from "@/components/GlowCard";
 import MagneticButton from "@/components/MagneticButton";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import emailjs from "@emailjs/browser";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be under 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be under 255 characters"),
+  subject: z.string().trim().min(3, "Subject must be at least 3 characters").max(200, "Subject must be under 200 characters"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message must be under 5000 characters"),
+});
+
+type ContactFormValues = z.infer<typeof contactSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!formRef.current) return;
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: { name: "", email: "", subject: "", message: "" },
+  });
+
+  const onSubmit = async (data: ContactFormValues) => {
     setLoading(true);
-    emailjs
-      .sendForm("service_xtaknap", "template_w86c77j", formRef.current, "LMotMXqMW84OY7Npb")
-      .then(() => {
-        setLoading(false);
-        toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
-        formRef.current?.reset();
-      })
-      .catch(() => {
-        setLoading(false);
-        toast({ title: "Error", description: "Failed to send message. Please try again.", variant: "destructive" });
-      });
+    try {
+      await emailjs.send(
+        "service_xtaknap",
+        "template_w86c77j",
+        {
+          from_name: data.name,
+          from_email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        "LMotMXqMW84OY7Npb"
+      );
+      toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
+      form.reset();
+    } catch {
+      toast({ title: "Error", description: "Failed to send message. Please try again.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -78,32 +100,46 @@ const Contact = () => {
             <div className="md:col-span-3">
               <GlowCard>
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" placeholder="Your name" required />
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <FormField control={form.control} name="name" render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name</FormLabel>
+                          <FormControl><Input placeholder="Your name" maxLength={100} {...field} /></FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )} />
+                      <FormField control={form.control} name="email" render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl><Input type="email" placeholder="you@example.com" maxLength={255} {...field} /></FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )} />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="you@example.com" required />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="How can we help?" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Tell us about your project or question..." rows={5} required />
-                  </div>
-                  <MagneticButton strength={0.3}>
-                    <Button type="submit" className="btn-3d-glow w-full gap-2" disabled={loading}>
-                      <Send className="h-4 w-4" />
-                      {loading ? "Sending..." : "Send Message"}
-                    </Button>
-                  </MagneticButton>
-                </form>
+                    <FormField control={form.control} name="subject" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Subject</FormLabel>
+                        <FormControl><Input placeholder="How can we help?" maxLength={200} {...field} /></FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                    <FormField control={form.control} name="message" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl><Textarea placeholder="Tell us about your project or question..." rows={5} maxLength={5000} {...field} /></FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                    <MagneticButton strength={0.3}>
+                      <Button type="submit" className="btn-3d-glow w-full gap-2" disabled={loading}>
+                        <Send className="h-4 w-4" />
+                        {loading ? "Sending..." : "Send Message"}
+                      </Button>
+                    </MagneticButton>
+                  </form>
+                </Form>
               </GlowCard>
             </div>
           </div>
