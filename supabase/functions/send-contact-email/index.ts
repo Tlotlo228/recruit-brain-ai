@@ -33,11 +33,11 @@ serve(async (req) => {
       });
     }
 
-    const payload: Record<string, string> = {
+    const payload: Record<string, unknown> = {
       service_id: serviceId,
       template_id: templateId,
       user_id: publicKey,
-      template_params: JSON.stringify({ from_name, from_email, subject, message }),
+      template_params: { from_name, from_email, subject, message },
     };
 
     if (privateKey) {
