@@ -1,4 +1,5 @@
 import { Mail, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -32,8 +33,17 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setLoading(true);
     try {
-      // For now, just show success — email integration can be added later
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      await emailjs.send(
+        "service_xtaknap",
+        "template_w86c77j",
+        {
+          from_name: data.name,
+          from_email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        "LMotMXqMW84OY7Npb"
+      );
       toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
       form.reset();
     } catch {
