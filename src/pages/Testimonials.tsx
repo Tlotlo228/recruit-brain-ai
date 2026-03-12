@@ -15,33 +15,40 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Client Name",
-    role: "CEO",
-    company: "Company Name",
-    text: "BIYU AI transformed our customer support with an intelligent chatbot that handles 80% of inquiries automatically. Our response time dropped from hours to seconds. Incredible work!",
+    name: "Bongani Moyo",
+    role: "Real Estate Agent",
+    company: "Moyo Properties",
+    text: "BIYU AI completely transformed how I run my real estate business. Their consulting helped me streamline lead generation, automate follow-ups, and close deals faster. I can't imagine going back to the old way of doing things.",
+    rating: 5,
+    videoUrl: "https://www.kapwing.com/e/69b243a724081d4b1677bc0c",
+  },
+  {
+    name: "Naledi Khumalo",
+    role: "Marketing Director",
+    company: "Savanna Digital",
+    text: "The automation workflows BIYU built for us saved our team 30+ hours per week. Their technical expertise and strategic thinking made the entire process seamless. We've seen a 45% increase in campaign efficiency since working with them.",
     rating: 5,
   },
   {
-    name: "Client Name",
+    name: "James Okonkwo",
+    role: "Founder & CEO",
+    company: "SwiftLogistics",
+    text: "Working with Tlotlo and Daudi was a game-changer. Their AI consulting helped us identify exactly where to implement AI for maximum ROI. Our delivery prediction accuracy went from 60% to 94%.",
+    rating: 5,
+  },
+  {
+    name: "Amara Diallo",
     role: "Operations Manager",
-    company: "Company Name",
-    text: "The automation workflows BIYU built for us saved our team 30+ hours per week. Their technical expertise and strategic thinking made the entire process seamless.",
+    company: "GreenField Farms",
+    text: "BIYU delivered a custom inventory management system powered by AI that reduced our waste by 35%. The quality of their work and their understanding of our agricultural business was outstanding.",
     rating: 5,
   },
   {
-    name: "Client Name",
-    role: "Founder",
-    company: "Company Name",
-    text: "Working with Tlotlo and Daudi was a game-changer. Their AI consulting helped us identify exactly where to implement AI for maximum ROI. Highly recommended!",
-    rating: 5,
-    videoUrl: "", // Add YouTube embed URL here e.g. "https://www.youtube.com/embed/VIDEO_ID"
-  },
-  {
-    name: "Client Name",
+    name: "Thabo Molefe",
     role: "CTO",
-    company: "Company Name",
-    text: "BIYU delivered a complete data pipeline solution in record time. The quality of their work and their understanding of our business needs was outstanding.",
-    rating: 5,
+    company: "FinEdge Solutions",
+    text: "BIYU AI transformed our customer support with an intelligent chatbot that handles 80% of inquiries automatically. Our response time dropped from hours to seconds. Best investment we've made this year.",
+    rating: 4,
   },
 ];
 
