@@ -15,9 +15,9 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Bongani Moyo",
+    name: "Bongani",
     role: "Real Estate Agent",
-    company: "Moyo Properties",
+    company: "Bongani Properties",
     text: "BIYU AI completely transformed how I run my real estate business. Their consulting helped me streamline lead generation, automate follow-ups, and close deals faster. I can't imagine going back to the old way of doing things.",
     rating: 5,
     videoUrl: "https://www.kapwing.com/e/69b243a724081d4b1677bc0c",
