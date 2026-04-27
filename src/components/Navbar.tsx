@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import biyuLogo from "@/assets/biyu-logo.jpeg";
+
 
 const navLinks = [
   { to: "/", label: "Home" },
