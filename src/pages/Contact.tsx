@@ -30,7 +30,7 @@ const Contact = () => {
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { name: "", email: "", subject: "", message: "" },
+    defaultValues: { name: "", email: "", subject: "", message: "", consent: false as unknown as true },
   });
 
   const onSubmit = async (data: ContactFormValues) => {
