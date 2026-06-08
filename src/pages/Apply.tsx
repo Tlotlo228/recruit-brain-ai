@@ -46,6 +46,7 @@ const Apply = () => {
     defaultValues: {
       fullName: "", email: "", phone: "", linkedin: "", coverLetter: "",
       experience: "", portfolio: "", whyBiyu: "",
+      consent: false as unknown as true,
     },
   });
 
