@@ -74,25 +74,23 @@ const StarRating = ({ rating }: { rating: number }) => (
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <GlowCard className="flex flex-col h-full">
-    {/* Video embed area */}
+    {/* Video area — Kapwing/external embeds block iframes, so render a click-to-watch thumbnail */}
     {testimonial.videoUrl && (
-      <div className="relative mb-4 aspect-video rounded-lg overflow-hidden bg-muted">
-        <iframe
-          src={testimonial.videoUrl}
-          title={`${testimonial.name} testimonial`}
-          className="absolute inset-0 h-full w-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
-    )}
-    {testimonial.videoUrl === "" && (
-      <div className="relative mb-4 aspect-video rounded-lg overflow-hidden bg-muted/50 border border-border flex items-center justify-center">
-        <div className="text-center text-muted-foreground">
-          <Play className="h-10 w-10 mx-auto mb-2 opacity-40" />
-          <p className="text-xs">Video testimonial coming soon</p>
+      <a
+        href={testimonial.videoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative mb-4 block aspect-video overflow-hidden rounded-lg bg-gradient-to-br from-primary/20 via-muted to-accent/20 border border-border"
+        aria-label={`Watch ${testimonial.name}'s video testimonial`}
+      >
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/90 text-primary-foreground shadow-lg transition-transform group-hover:scale-110">
+            <Play className="h-6 w-6 fill-current ml-1" />
+          </div>
+          <p className="mt-3 text-sm font-semibold">Watch Video Testimonial</p>
+          <p className="text-xs text-muted-foreground">{testimonial.name} • opens in new tab</p>
         </div>
-      </div>
+      </a>
     )}
 
     <Quote className="h-8 w-8 text-primary/30 mb-3" />

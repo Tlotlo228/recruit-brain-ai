@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,6 +28,7 @@ const formSchema = z.object({
   experience: z.string().min(1, "Please select your experience level"),
   portfolio: z.string().trim().url("Enter a valid URL").optional().or(z.literal("")),
   whyBiyu: z.string().trim().min(20, "Please write at least 20 characters").max(2000),
+  consent: z.literal(true, { errorMap: () => ({ message: "You must consent to data processing to submit this application" }) }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -43,6 +46,7 @@ const Apply = () => {
     defaultValues: {
       fullName: "", email: "", phone: "", linkedin: "", coverLetter: "",
       experience: "", portfolio: "", whyBiyu: "",
+      consent: false as unknown as true,
     },
   });
 
@@ -214,6 +218,26 @@ const Apply = () => {
                     <FormLabel>Why do you want to work at BIYU AI Agency? *</FormLabel>
                     <FormControl><Textarea rows={4} placeholder="Share your motivation…" {...field} /></FormControl>
                     <FormMessage />
+                  </FormItem>
+                )} />
+
+                <FormField control={form.control} name="consent" render={({ field }) => (
+                  <FormItem className="flex flex-row items-start gap-3 rounded-md border border-border bg-muted/30 p-3">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value as unknown as boolean}
+                        onCheckedChange={field.onChange}
+                        className="mt-0.5"
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-tight">
+                      <FormLabel className="text-sm font-normal cursor-pointer">
+                        I consent to BIYU AI Agency collecting, storing and processing my personal data and resume for the purpose of evaluating my application, in accordance with the{" "}
+                        <Link to="/privacy" className="text-primary underline hover:text-primary/80">Privacy Policy</Link>{" "}
+                        and the Botswana Data Protection Act, 2018. *
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
                   </FormItem>
                 )} />
 

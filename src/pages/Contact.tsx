@@ -1,8 +1,10 @@
 import { Mail, MapPin, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import GlowCard from "@/components/GlowCard";
 import MagneticButton from "@/components/MagneticButton";
 import { useState } from "react";
@@ -17,6 +19,7 @@ const contactSchema = z.object({
   email: z.string().trim().email("Invalid email address").max(255, "Email must be under 255 characters"),
   subject: z.string().trim().min(3, "Subject must be at least 3 characters").max(200, "Subject must be under 200 characters"),
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message must be under 5000 characters"),
+  consent: z.literal(true, { errorMap: () => ({ message: "You must consent to data processing to submit this form" }) }),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
@@ -27,7 +30,7 @@ const Contact = () => {
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { name: "", email: "", subject: "", message: "" },
+    defaultValues: { name: "", email: "", subject: "", message: "", consent: false as unknown as true },
   });
 
   const onSubmit = async (data: ContactFormValues) => {
@@ -130,6 +133,25 @@ const Contact = () => {
                         <FormLabel>Message</FormLabel>
                         <FormControl><Textarea placeholder="Tell us about your project or question..." rows={5} maxLength={5000} {...field} /></FormControl>
                         <FormMessage />
+                      </FormItem>
+                    )} />
+                    <FormField control={form.control} name="consent" render={({ field }) => (
+                      <FormItem className="flex flex-row items-start gap-3 rounded-md border border-border bg-muted/30 p-3">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value as unknown as boolean}
+                            onCheckedChange={field.onChange}
+                            className="mt-0.5"
+                          />
+                        </FormControl>
+                        <div className="space-y-1 leading-tight">
+                          <FormLabel className="text-sm font-normal cursor-pointer">
+                            I consent to BIYU AI Agency collecting and processing the personal data I have submitted (name, email, message) for the purpose of responding to my enquiry, in accordance with the{" "}
+                            <Link to="/privacy" className="text-primary underline hover:text-primary/80">Privacy Policy</Link>{" "}
+                            and the Botswana Data Protection Act, 2018.
+                          </FormLabel>
+                          <FormMessage />
+                        </div>
                       </FormItem>
                     )} />
                     <MagneticButton strength={0.3}>
