@@ -221,6 +221,26 @@ const Apply = () => {
                   </FormItem>
                 )} />
 
+                <FormField control={form.control} name="consent" render={({ field }) => (
+                  <FormItem className="flex flex-row items-start gap-3 rounded-md border border-border bg-muted/30 p-3">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value as unknown as boolean}
+                        onCheckedChange={field.onChange}
+                        className="mt-0.5"
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-tight">
+                      <FormLabel className="text-sm font-normal cursor-pointer">
+                        I consent to BIYU AI Agency collecting, storing and processing my personal data and resume for the purpose of evaluating my application, in accordance with the{" "}
+                        <Link to="/privacy" className="text-primary underline hover:text-primary/80">Privacy Policy</Link>{" "}
+                        and the Botswana Data Protection Act, 2018. *
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
+                  </FormItem>
+                )} />
+
                 <MagneticButton className="w-full" strength={0.2}>
                   <Button type="submit" size="lg" className="btn-3d-glow w-full group relative overflow-hidden" disabled={submitting}>
                     {submitting ? (
