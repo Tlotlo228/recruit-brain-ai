@@ -1,8 +1,10 @@
 import { Mail, MapPin, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import GlowCard from "@/components/GlowCard";
 import MagneticButton from "@/components/MagneticButton";
 import { useState } from "react";
@@ -17,6 +19,7 @@ const contactSchema = z.object({
   email: z.string().trim().email("Invalid email address").max(255, "Email must be under 255 characters"),
   subject: z.string().trim().min(3, "Subject must be at least 3 characters").max(200, "Subject must be under 200 characters"),
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message must be under 5000 characters"),
+  consent: z.literal(true, { errorMap: () => ({ message: "You must consent to data processing to submit this form" }) }),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
