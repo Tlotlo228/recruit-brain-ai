@@ -28,6 +28,7 @@ const formSchema = z.object({
   experience: z.string().min(1, "Please select your experience level"),
   portfolio: z.string().trim().url("Enter a valid URL").optional().or(z.literal("")),
   whyBiyu: z.string().trim().min(20, "Please write at least 20 characters").max(2000),
+  consent: z.literal(true, { errorMap: () => ({ message: "You must consent to data processing to submit this application" }) }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
