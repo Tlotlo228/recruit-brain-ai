@@ -23,6 +23,13 @@ const testimonials: Testimonial[] = [
     videoUrl: "https://www.kapwing.com/e/69b243a724081d4b1677bc0c",
   },
   {
+    name: "Phatsimo",
+    role: "Business Owner",
+    company: "Consultation Client",
+    text: "Huge thank you to Tlotlo and BIYU AI Agency for the smooth and insightful consultation on my business. I genuinely didn't realize how much time and energy I was losing in certain areas until they broke everything down for me. The way they explained how AI tools and automation could help improve workflow, save time, and make things easier was honestly eye-opening. What I loved most is that it didn't even feel like a boring business meeting. It felt like people who actually care about seeing businesses grow sat down with me and said, 'Here's where you can do better, and here's how we can help you get there.' Thank you BIYU AI Agency for the wisdom, patience, and vision.",
+    rating: 5,
+  },
+  {
     name: "Naledi Khumalo",
     role: "Marketing Director",
     company: "Savanna Digital",
