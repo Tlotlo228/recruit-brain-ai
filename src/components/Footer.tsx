@@ -44,8 +44,12 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} BIYU AI Agency. All rights reserved.
+      <div className="mt-8 border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+        <p>© {new Date().getFullYear()} BIYU AI Agency. All rights reserved.</p>
+        <div className="flex items-center gap-4">
+          <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+        </div>
       </div>
     </div>
   </footer>
