@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Brain, Bot, GraduationCap, Code, Blocks, Users, Rocket, Shield } from "lucide-react";
+import { ArrowRight, Brain, Bot, CalendarCheck, BellRing, Database, BarChart3, MapPin, Search, Receipt, MessageCircle } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
 import GlowCard from "@/components/GlowCard";
 import RoboticToggle from "@/components/RoboticToggle";
@@ -9,19 +9,22 @@ import Typewriter from "@/components/Typewriter";
 import WavingRobot from "@/components/WavingRobot";
 
 const services = [
-  { icon: Bot, title: "AI Automations", desc: "Streamline your business with intelligent automation workflows that save time, reduce errors, and scale effortlessly." },
-  { icon: Brain, title: "AI Consulting", desc: "Strategic AI guidance to identify opportunities, optimize operations, and implement cutting-edge solutions for your business." },
-  { icon: GraduationCap, title: "AI Mentorship", desc: "One-on-one and group mentorship programs to upskill your team in AI technologies and best practices." },
-  { icon: Blocks, title: "No-Code / Low-Code", desc: "Rapid application development using no-code and low-code platforms to bring your ideas to life fast." },
-  { icon: Code, title: "Custom Development", desc: "Full-stack custom software development for complex AI-powered applications tailored to your needs." },
+  { icon: CalendarCheck, title: "Booking & ordering websites", desc: "Mobile-first sites where customers book, order or enquire, with requests sent straight to your WhatsApp or email." },
+  { icon: BellRing, title: "Follow-ups & reminders", desc: "Instant replies to new enquiries, follow-up emails, and reminders that bring clients back, running on n8n." },
+  { icon: Bot, title: "AI customer assistants", desc: "Assistants that answer common questions, collect details and hand the customer to your team at the right moment." },
+  { icon: Database, title: "CRM & pipeline setup", desc: "One place for every lead, customer and next step. We're HotKup's partner in Botswana for service businesses." },
+  { icon: BarChart3, title: "Monthly results reports", desc: "Every month you see what the system did: enquiries, orders, bookings and returning clients." },
+  { icon: Brain, title: "AI audits & training", desc: "We map where your time and customers are being lost, then show your team how to use AI in their own work." },
 ];
 
 const highlights = [
-  { icon: Brain, title: "AI-First Culture", desc: "We live and breathe AI — it's at the core of everything we build." },
-  { icon: Users, title: "Expert Team", desc: "Two co-founders with deep expertise in AI, automation, and business strategy." },
-  { icon: Rocket, title: "Rapid Delivery", desc: "From concept to deployment in weeks, not months." },
-  { icon: Shield, title: "Trusted Partners", desc: "Delivering reliable AI solutions for businesses across Africa and beyond." },
+  { icon: Search, title: "Problem first", desc: "We find the one thing costing you money, then choose the technology. Sometimes the answer is simpler than AI." },
+  { icon: MapPin, title: "Built in Botswana", desc: "Based in Gaborone and Francistown, building for customers who use phones, WhatsApp and mobile data." },
+  { icon: BarChart3, title: "Results you can see", desc: "A monthly report shows what the system did for you, so you can judge it on numbers, not promises." },
+  { icon: Receipt, title: "No setup fee", desc: "One monthly fee, based on the value of the problem we fix. Three-month minimum." },
 ];
+
+const WHATSAPP_URL = "https://wa.me/26776406432?text=" + encodeURIComponent("Hi BIYU, I'd like to book a free AI audit for my business.");
 
 const Index = () => (
   <div>
@@ -35,21 +38,22 @@ const Index = () => (
           AI Agency — Botswana
         </div>
         <h1 className="opacity-0 animate-fade-in-delay-1 mx-auto max-w-4xl text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-          Building the Future with{" "}
+          Less admin. Fewer lost customers.{" "}
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            <Typewriter text="Artificial Intelligence" speed={80} />
+            <Typewriter text="Systems that follow up for you." speed={60} />
           </span>
         </h1>
         <p className="opacity-0 animate-fade-in-delay-2 mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          BIYU AI Agency delivers AI automations, consulting, mentorship, and custom development
-          to transform businesses across Botswana and beyond.
+          BIYU AI Agency builds booking, ordering, follow-up and reminder systems for businesses in
+          Botswana, on WhatsApp, email and the web. We start with the problem that's costing you money,
+          then choose the technology.
         </p>
         <div className="opacity-0 animate-fade-in-delay-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <MagneticButton strength={0.4}>
             <Button asChild size="lg" className="btn-3d-glow gap-2 px-8 text-base relative overflow-hidden group">
-              <Link to="/services">
+              <Link to="/contact">
                 <span className="relative z-10 flex items-center gap-2">
-                  Our Services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Book a free AI audit <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
             </Button>
@@ -57,7 +61,7 @@ const Index = () => (
           <MagneticButton strength={0.3}>
             <Button asChild variant="outline" size="lg" className="btn-3d-outline px-8 text-base group">
               <Link to="/portfolio">
-                <span className="transition-colors group-hover:text-primary">View Our Work</span>
+                <span className="transition-colors group-hover:text-primary">See our work</span>
               </Link>
             </Button>
           </MagneticButton>
@@ -67,10 +71,10 @@ const Index = () => (
         <div className="relative opacity-0 animate-fade-in-delay-3 mt-16">
           <WavingRobot />
           <div className="flex items-center justify-center gap-8 flex-wrap relative z-20">
-            <RoboticToggle label="Automations" active />
-            <RoboticToggle label="Consulting" />
-            <RoboticToggle label="Mentorship" active />
-            <RoboticToggle label="No-Code" />
+            <RoboticToggle label="Bookings" active />
+            <RoboticToggle label="Follow-ups" />
+            <RoboticToggle label="Reminders" active />
+            <RoboticToggle label="Reports" />
           </div>
         </div>
       </div>
@@ -83,7 +87,7 @@ const Index = () => (
           What We Do
         </h2>
         <p className="opacity-0 animate-fade-in-delay-1 text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-          End-to-end AI solutions — from strategy to deployment.
+          Practical systems for the work that slows a small business down.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 animate-stagger">
           {services.map((s) => (
@@ -114,10 +118,10 @@ const Index = () => (
     <section className="py-20 md:py-28 bg-muted/30">
       <div className="container mx-auto px-4">
         <h2 className="opacity-0 animate-fade-in text-center text-3xl font-bold md:text-4xl mb-4">
-          Why BIYU AI?
+          Why BIYU?
         </h2>
         <p className="opacity-0 animate-fade-in-delay-1 text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-          We don't just talk AI — we build it, deploy it, and teach it.
+          How we work with every client.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 animate-stagger">
           {highlights.map((h) => (
@@ -137,24 +141,24 @@ const Index = () => (
     <section className="bg-accent py-16 md:py-20">
       <div className="container mx-auto px-4 text-center">
         <h2 className="opacity-0 animate-fade-in text-3xl font-bold text-accent-foreground md:text-4xl mb-4">
-          Ready to Transform Your Business with AI?
+          What's slowing your business down?
         </h2>
         <p className="opacity-0 animate-fade-in-delay-1 text-accent-foreground/70 mb-8 max-w-lg mx-auto">
-          Get in touch with us today and let's explore how AI can take your business to the next level.
+          Tell us where time or customers are slipping away. We'll look at it with you for free and show you what we'd fix first.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <MagneticButton strength={0.35}>
             <Button asChild size="lg" variant="secondary" className="btn-3d-outline opacity-0 animate-fade-in-delay-2 gap-2 px-8 text-base group">
               <Link to="/contact">
-                Contact Us <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                Book a free AI audit <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </MagneticButton>
           <MagneticButton strength={0.3}>
             <Button asChild size="lg" variant="secondary" className="btn-3d-outline opacity-0 animate-fade-in-delay-3 gap-2 px-8 text-base group">
-              <Link to="/apply">
-                Join Our Team <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
+              </a>
             </Button>
           </MagneticButton>
         </div>

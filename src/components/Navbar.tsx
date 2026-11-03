@@ -9,7 +9,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
-  { to: "/portfolio", label: "Portfolio" },
+  { to: "/portfolio", label: "Our Work" },
   { to: "/testimonials", label: "Testimonials" },
   { to: "/faq", label: "FAQ" },
 ];
@@ -43,7 +43,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Button asChild className="btn-3d-glow">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact">Book a free audit</Link>
           </Button>
         </div>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Button asChild className="w-full">
-            <Link to="/contact" onClick={() => setOpen(false)}>Contact Us</Link>
+            <Link to="/contact" onClick={() => setOpen(false)}>Book a free audit</Link>
           </Button>
         </div>
       )}

@@ -1,14 +1,14 @@
-import { Brain, Target, Heart, Globe, Linkedin, Mail } from "lucide-react";
+import { Search, ShieldCheck, LifeBuoy, Smartphone, Linkedin } from "lucide-react";
 import tlotloPhoto from "@/assets/tlotlo.png";
 import daudiPhoto from "@/assets/daudi.jpg";
 import GlowCard from "@/components/GlowCard";
 import RoboticToggle from "@/components/RoboticToggle";
 
 const values = [
-  { icon: Brain, title: "Innovation First", desc: "We push boundaries in AI research and application, never settling for the status quo." },
-  { icon: Target, title: "Impact Driven", desc: "Every project we take on is measured by the tangible value it creates for our clients." },
-  { icon: Heart, title: "People Centered", desc: "Our team is our greatest asset. We invest in growth, well-being, and continuous learning." },
-  { icon: Globe, title: "Global Reach", desc: "We serve clients worldwide, embracing diverse perspectives and cross-cultural collaboration." },
+  { icon: Search, title: "Problem first", desc: "We ask how the work happens today and what it costs before we suggest anything. If a simpler fix works better than AI, we'll say so." },
+  { icon: ShieldCheck, title: "Honest proof", desc: "We only show work and results we can back up. No invented numbers, no fake reviews, no guarantees we can't keep." },
+  { icon: LifeBuoy, title: "We stay after launch", desc: "Every system comes with support, a monthly results report and one improvement a month." },
+  { icon: Smartphone, title: "Built for how Botswana works", desc: "Mobile-first, light on data, and connected to WhatsApp, because that's where your customers already are." },
 ];
 
 const founders = [
@@ -17,16 +17,16 @@ const founders = [
     role: "Co-Founder & Technical Lead",
     photo: tlotloPhoto,
     linkedin: "https://www.linkedin.com/in/tlotlojohane",
-    bio: "Tlotlo is the technical backbone of BIYU AI. With deep expertise in AI development, automation workflows, and full-stack engineering, he architects and builds the intelligent systems that power our client solutions. From custom AI chatbots to complex automation pipelines, Tlotlo turns ambitious ideas into working products.",
-    specialties: ["AI Development", "Automation", "Full-Stack Engineering", "System Architecture"],
+    bio: "Tlotlo is BIYU's technical lead. He designs and builds BIYU's client systems: booking and ordering websites, n8n follow-up and reminder workflows, AI assistants and the monthly results reports that show clients what their system did.",
+    specialties: ["n8n Automation", "AI Assistants", "Web Development", "System Design"],
   },
   {
     name: "Daudi Soniya",
     role: "Co-Founder & Strategy Lead",
     photo: daudiPhoto,
     linkedin: "https://www.linkedin.com/in/daudi-soniya-said-msonda-16030b28b",
-    bio: "Daudi drives the strategic vision and client relationships at BIYU AI. With a sharp eye for market opportunities and a passion for AI-powered business transformation, he leads consulting engagements, marketing strategy, and client success — ensuring every solution delivers real business value.",
-    specialties: ["AI Consulting", "Marketing Strategy", "Business Development", "Client Success"],
+    bio: "Daudi leads strategy and client relationships. He leads client conversations, consulting and marketing, making sure every system BIYU builds starts from a real business problem.",
+    specialties: ["AI Consulting", "Marketing", "Business Development", "Client Success"],
   },
 ];
 
@@ -38,14 +38,14 @@ const About = () => (
           About BIYU AI Agency
         </h1>
         <p className="opacity-0 animate-fade-in-delay-1 text-lg text-muted-foreground">
-          BIYU AI Agency is a next-generation AI agency based in Botswana, specializing in AI automations,
-          consulting, mentorship, and custom development. We help businesses harness the power of
-          artificial intelligence to grow, scale, and innovate.
+          BIYU AI Agency is based in Gaborone and Francistown. We build AI and automation systems for
+          small and mid-sized businesses: booking and ordering websites, follow-ups, reminders, CRM and
+          reporting. Our focus is the work that costs owners time and customers.
         </p>
         <div className="opacity-0 animate-fade-in-delay-2 mt-10 flex items-center justify-center gap-6 flex-wrap">
-          <RoboticToggle label="Automations" active />
-          <RoboticToggle label="Consulting" active />
-          <RoboticToggle label="Mentorship" />
+          <RoboticToggle label="Bookings" active />
+          <RoboticToggle label="Follow-ups" active />
+          <RoboticToggle label="Reports" />
         </div>
       </div>
     </section>
@@ -57,17 +57,16 @@ const About = () => (
           <GlowCard>
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
             <p className="text-muted-foreground leading-relaxed">
-              To democratize AI for businesses across Africa and beyond. We believe every organization
-              — from startups to enterprises — deserves access to world-class AI solutions that drive
-              real results.
+              To help Botswana's small businesses stop losing customers and hours to manual work, with
+              systems they can afford, understand and measure.
             </p>
           </GlowCard>
           <GlowCard>
             <h2 className="text-2xl font-bold mb-4">What We Do</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We build AI automations, provide strategic consulting, mentor teams on AI adoption,
-              and develop custom solutions using both no-code/low-code tools and traditional software
-              engineering. We're your end-to-end AI partner.
+              We audit how your business runs today, find the costliest leak (a missed follow-up, a
+              no-show, a customer who never comes back) and build the smallest system that fixes it.
+              Then we report on it every month.
             </p>
           </GlowCard>
         </div>
@@ -77,7 +76,7 @@ const About = () => (
           Meet the Founders
         </h2>
         <p className="opacity-0 animate-fade-in-delay-1 text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-          Two passionate AI enthusiasts building the future from Botswana.
+          The people who'll build and look after your system.
         </p>
         <div className="grid gap-8 md:grid-cols-2 mb-16 animate-stagger">
           {founders.map((founder) => (
@@ -104,7 +103,7 @@ const About = () => (
         </div>
 
         {/* Values */}
-        <h2 className="opacity-0 animate-fade-in text-2xl font-bold text-center mb-10">Our Values</h2>
+        <h2 className="opacity-0 animate-fade-in text-2xl font-bold text-center mb-10">How we work</h2>
         <div className="grid gap-6 sm:grid-cols-2 animate-stagger">
           {values.map((v) => (
             <GlowCard key={v.title} className="flex gap-4">

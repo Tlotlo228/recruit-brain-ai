@@ -12,7 +12,7 @@ const Footer = () => (
             <span>BIYU AI</span>
           </Link>
           <p className="text-sm text-muted-foreground max-w-xs">
-            Connecting top AI talent with forward-thinking companies building the future.
+            AI and automation systems for businesses in Botswana: bookings, follow-ups, reminders and reports.
           </p>
         </div>
         <div>
@@ -35,7 +35,9 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold mb-3 text-sm" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Contact</h4>
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p>info.biyu.ai@gmail.com</p>
+            <a href="mailto:info.biyu.ai@gmail.com" className="block hover:text-primary transition-colors">info.biyu.ai@gmail.com</a>
+            <a href="https://wa.me/26776406432" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors">WhatsApp: +267 76 406 432</a>
+            <a href="tel:+26772382004" className="block hover:text-primary transition-colors">Call: +267 72 382 004</a>
             <p>Gaborone, Botswana</p>
             <p>Francistown, Botswana</p>
             <a href="https://www.linkedin.com/in/biyu-ai-817037382" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-primary transition-colors mt-2">

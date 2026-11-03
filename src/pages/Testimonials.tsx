@@ -29,34 +29,6 @@ const testimonials: Testimonial[] = [
     text: "Huge thank you to Tlotlo and BIYU AI Agency for the smooth and insightful consultation on my business. I genuinely didn't realize how much time and energy I was losing in certain areas until they broke everything down for me. The way they explained how AI tools and automation could help improve workflow, save time, and make things easier was honestly eye-opening. What I loved most is that it didn't even feel like a boring business meeting. It felt like people who actually care about seeing businesses grow sat down with me and said, 'Here's where you can do better, and here's how we can help you get there.' Thank you BIYU AI Agency for the wisdom, patience, and vision.",
     rating: 5,
   },
-  {
-    name: "Naledi Khumalo",
-    role: "Marketing Director",
-    company: "Savanna Digital",
-    text: "The automation workflows BIYU built for us saved our team 30+ hours per week. Their technical expertise and strategic thinking made the entire process seamless. We've seen a 45% increase in campaign efficiency since working with them.",
-    rating: 5,
-  },
-  {
-    name: "James Okonkwo",
-    role: "Founder & CEO",
-    company: "SwiftLogistics",
-    text: "Working with Tlotlo and Daudi was a game-changer. Their AI consulting helped us identify exactly where to implement AI for maximum ROI. Our delivery prediction accuracy went from 60% to 94%.",
-    rating: 5,
-  },
-  {
-    name: "Amara Diallo",
-    role: "Operations Manager",
-    company: "GreenField Farms",
-    text: "BIYU delivered a custom inventory management system powered by AI that reduced our waste by 35%. The quality of their work and their understanding of our agricultural business was outstanding.",
-    rating: 5,
-  },
-  {
-    name: "Thabo Molefe",
-    role: "CTO",
-    company: "FinEdge Solutions",
-    text: "BIYU AI transformed our customer support with an intelligent chatbot that handles 80% of inquiries automatically. Our response time dropped from hours to seconds. Best investment we've made this year.",
-    rating: 4,
-  },
 ];
 
 const StarRating = ({ rating }: { rating: number }) => (
@@ -118,8 +90,8 @@ const Testimonials = () => (
           What Our Clients Say
         </h1>
         <p className="opacity-0 animate-fade-in-delay-1 text-lg text-muted-foreground">
-          Hear from the businesses we've helped transform with AI solutions,
-          automation, and strategic consulting.
+          In their own words, from business owners we've worked with. We only publish feedback
+          that clients have given us.
         </p>
       </div>
     </section>
@@ -139,15 +111,15 @@ const Testimonials = () => (
     <section className="bg-accent py-16 md:py-20">
       <div className="container mx-auto px-4 text-center">
         <h2 className="opacity-0 animate-fade-in text-3xl font-bold text-accent-foreground md:text-4xl mb-4">
-          Ready to Join Our Success Stories?
+          Want to see what we'd fix in your business?
         </h2>
         <p className="opacity-0 animate-fade-in-delay-1 text-accent-foreground/70 mb-8 max-w-lg mx-auto">
-          Let's build something amazing together.
+          Book a free AI audit. We'll map where time and customers are slipping away.
         </p>
         <MagneticButton strength={0.35}>
           <Button asChild size="lg" variant="secondary" className="btn-3d-outline opacity-0 animate-fade-in-delay-2 gap-2 px-8 text-base group">
             <Link to="/contact">
-              Get Started <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              Book a free AI audit <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
         </MagneticButton>

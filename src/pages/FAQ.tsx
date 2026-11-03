@@ -5,14 +5,14 @@ import { ArrowRight } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
 
 const faqs = [
-  { q: "What roles are currently open?", a: "We're actively hiring AI Specialists who have experience with machine learning, NLP, computer vision, or AI product management. Check the Apply page for full details." },
-  { q: "What is the application process?", a: "Submit your application through our online form. Our team reviews every submission within 5 business days. Qualified candidates are invited for a phone screen, followed by a technical interview and a final culture-fit conversation." },
-  { q: "Is the position remote or on-site?", a: "We offer flexible hybrid and fully remote options for most roles. Specific arrangements are discussed during the interview process." },
-  { q: "What file formats are accepted for resumes?", a: "We accept PDF and DOCX files up to 5MB in size." },
-  { q: "How long should my cover letter be?", a: "Your cover letter should be between 200 and 500 words. Focus on your AI experience and what excites you about working at BIYU." },
-  { q: "What experience level do you look for?", a: "We welcome applicants at all levels — from those with less than a year of AI experience to seasoned professionals with 5+ years. We value potential and passion alongside expertise." },
-  { q: "When can I expect to hear back?", a: "We aim to respond to all applicants within 5–7 business days. If you're selected for the next round, you'll receive an email with scheduling details." },
-  { q: "Can I reapply if I'm not selected?", a: "Absolutely. We encourage candidates to reapply after 6 months, especially if you've gained new skills or experience." },
+  { q: "What happens in the free AI audit?", a: "We talk through how your business runs today: how customers find you, book, order and pay, and where things slow down or get forgotten. You leave knowing the one problem worth fixing first and roughly what it's costing you." },
+  { q: "How does your pricing work?", a: "There's no setup fee. You pay one monthly fee, based on the value of the problem we fix, which we work out with your own numbers during the audit. The minimum is three months, and the first month is paid before we start building." },
+  { q: "What's included in the monthly fee?", a: "The system itself, hosting, support and small changes, a monthly results report showing what the system did, and one improvement each month." },
+  { q: "Do my customers need to download anything?", a: "No. Most of what we build works through things your customers already use: WhatsApp, email and a mobile website." },
+  { q: "Do you only use AI?", a: "No. We start with the problem. Sometimes the right fix is a simple automation, a booking page or a reminder, not an AI tool." },
+  { q: "Which tools do you build with?", a: "Mostly n8n for automations, modern web apps for websites and dashboards, AI models such as Claude for assistants and drafting, plus Google Workspace, WhatsApp and email. For CRM we partner with HotKup." },
+  { q: "Where are you based?", a: "Gaborone and Francistown, Botswana. We meet in person where we can and work remotely for clients elsewhere." },
+  { q: "Are you hiring?", a: "When we have open roles, you'll find them on our Apply page." },
 ];
 
 const FAQ = () => (
@@ -23,7 +23,7 @@ const FAQ = () => (
           Frequently Asked Questions
         </h1>
         <p className="opacity-0 animate-fade-in-delay-1 text-muted-foreground max-w-xl mx-auto">
-          Everything you need to know about applying to BIYU AI Agency.
+          Straight answers about how we work, what it costs and what you get.
         </p>
       </div>
     </section>

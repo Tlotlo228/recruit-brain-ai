@@ -24,69 +24,57 @@ import MagneticButton from "@/components/MagneticButton";
 
 const packages = [
   {
-    name: "BIYU Booking System",
-    price: "P2,500",
-    label: "Starting price",
+    name: "Booking & Ordering System",
+    price: "Monthly fee",
+    label: "No setup fee",
     description:
-      "A professional website and online booking system designed to make appointments easier to manage.",
+      "A mobile website where customers book, order or enquire, with every request landing on your WhatsApp or email.",
     icon: CalendarCheck,
     featured: false,
     features: [
-      "Professional business website",
-      "Online booking system",
-      "Google Calendar integration",
-      "Services and pricing section",
-      "WhatsApp contact option",
-      "Mobile-friendly design",
-      "Google Maps/location section",
-      "Basic onboarding and training",
-      "14-day support after launch",
+      "Mobile-first business website",
+      "Online booking or ordering",
+      "WhatsApp booking and order requests",
+      "Services, menu and prices",
+      "Location and contact details",
+      "Hosting, support and small changes",
+      "Monthly results report",
     ],
   },
   {
-    name: "BIYU Business Automation System",
-    price: "P5,000",
-    label: "Starting price",
+    name: "Follow-up & Return System",
+    price: "Monthly fee",
+    label: "No setup fee",
     description:
-      "Connected systems that reduce repetitive administrative work and improve lead, customer, booking, and follow-up management.",
+      "Automations that reply to new enquiries, follow up until they book, and bring past clients back.",
     icon: Workflow,
     featured: true,
     features: [
-      "Everything in the Booking System where relevant",
-      "Automated booking confirmations",
-      "Appointment reminders",
-      "Automated customer follow-ups",
-      "Lead capture system",
-      "CRM setup",
-      "Customer database",
+      "Instant reply to every new enquiry",
+      "Follow-up emails and WhatsApp nudge lists",
+      "Rebooking reminders for past clients",
+      "Client list built automatically (forms or QR check-in)",
       "n8n automation workflows",
-      "Business optimisation session",
-      "Staff training",
-      "30-day support after launch",
+      "Monthly results report",
+      "One improvement every month",
     ],
   },
   {
-    name: "BIYU AI Transformation",
-    price: "P10,000+",
-    label: "Custom implementation",
+    name: "Connected Business System",
+    price: "Monthly fee",
+    label: "Scoped after the audit",
     description:
-      "A customised AI and automation transformation for businesses that need multiple systems and workflows connected.",
+      "For businesses that need several parts connected: leads, customers, bookings, support and reporting.",
     icon: Rocket,
     featured: false,
     features: [
-      "AI chatbot or AI agent",
-      "WhatsApp automation",
-      "CRM implementation",
-      "Lead management",
-      "Lead qualification",
-      "Booking automation",
-      "Customer service automation",
+      "CRM and lead pipeline (HotKup partner)",
+      "AI customer assistant",
+      "WhatsApp and email automation",
       "Internal workflow automation",
-      "Reporting dashboards",
-      "Custom integrations",
-      "AI assistants and knowledge bases",
-      "Staff training",
-      "90-day support",
+      "Reporting dashboard",
+      "Team training",
+      "Monthly results report and improvements",
     ],
   },
 ];
@@ -97,13 +85,13 @@ const additionalServices = [
     title: "AI Business Efficiency Audit",
     price: "Free initial audit",
     description:
-      "Identify repetitive work, operational bottlenecks, missed opportunities, and the highest-value areas for AI and automation.",
+      "A conversation about how your business runs today. You leave knowing what to fix first and what it's worth.",
     benefit: "Know what to automate first and why it matters.",
   },
   {
     icon: Bot,
     title: "AI Chatbots",
-    price: "From P3,500",
+    price: "",
     description:
       "AI-powered customer assistants that answer common questions, collect information, and guide customers to the next step.",
     benefit: "Respond faster and reduce repeated enquiries.",
@@ -111,7 +99,7 @@ const additionalServices = [
   {
     icon: Network,
     title: "AI Agents",
-    price: "From P7,500",
+    price: "",
     description:
       "Advanced AI systems that support customer communication and perform selected business workflow tasks.",
     benefit: "Give your business an intelligent digital assistant.",
@@ -119,7 +107,7 @@ const additionalServices = [
   {
     icon: Workflow,
     title: "n8n Workflow Automation",
-    price: "From P3,500",
+    price: "",
     description:
       "Connect the tools your business already uses and automate repetitive workflows.",
     benefit: "Reduce manual copying, updating, checking, and sending.",
@@ -127,7 +115,7 @@ const additionalServices = [
   {
     icon: Database,
     title: "CRM Implementation",
-    price: "From P5,000",
+    price: "",
     description:
       "Organise leads, customers, follow-ups, and sales opportunities in one structured system.",
     benefit: "Know what is happening with every lead and customer.",
@@ -135,7 +123,7 @@ const additionalServices = [
   {
     icon: MessageSquare,
     title: "WhatsApp Automation",
-    price: "From P3,500",
+    price: "",
     description:
       "Automate routine WhatsApp communication, lead collection, reminders, notifications, and follow-ups.",
     benefit: "Improve communication without manually handling every routine message.",
@@ -143,7 +131,7 @@ const additionalServices = [
   {
     icon: Headphones,
     title: "AI Customer Service System",
-    price: "From P5,000",
+    price: "",
     description:
       "Improve how your business handles customer questions, requests, routing, and escalation.",
     benefit: "Create a more organised and responsive customer service process.",
@@ -151,7 +139,7 @@ const additionalServices = [
   {
     icon: Zap,
     title: "AI Lead Generation System",
-    price: "From P7,500",
+    price: "",
     description:
       "Capture, qualify, organise, and follow up with potential customers.",
     benefit: "Reduce lost leads and create a clearer path from enquiry to sale.",
@@ -159,7 +147,7 @@ const additionalServices = [
   {
     icon: Code,
     title: "Website Development",
-    price: "From P2,500",
+    price: "",
     description:
       "Professional websites built around your business goals and customer journey.",
     benefit: "Give customers a clear and professional way to understand and contact your business.",
@@ -167,7 +155,7 @@ const additionalServices = [
   {
     icon: Settings,
     title: "Website Maintenance",
-    price: "P500/month",
+    price: "",
     description:
       "Ongoing website updates, technical support, troubleshooting, and minor improvements.",
     benefit: "Keep your online presence updated and supported.",
@@ -175,7 +163,7 @@ const additionalServices = [
   {
     icon: Smartphone,
     title: "Software and App Development",
-    price: "From P15,000",
+    price: "",
     description:
       "Custom software, web applications, internal tools, and business platforms.",
     benefit: "Build a digital system around the way your business operates.",
@@ -183,7 +171,7 @@ const additionalServices = [
   {
     icon: LayoutDashboard,
     title: "Data and Reporting Dashboards",
-    price: "From P5,000",
+    price: "",
     description:
       "Dashboards that help businesses understand sales, leads, customers, bookings, and operations.",
     benefit: "Make decisions using clearer business information.",
@@ -191,7 +179,7 @@ const additionalServices = [
   {
     icon: GraduationCap,
     title: "Corporate AI Training",
-    price: "From P1,500/session",
+    price: "",
     description:
       "Practical AI training for teams and organisations using real business examples.",
     benefit: "Help employees become more confident and capable with AI.",
@@ -199,7 +187,7 @@ const additionalServices = [
   {
     icon: Brain,
     title: "AI Consulting and Strategy",
-    price: "From P1,500",
+    price: "",
     description:
       "Practical guidance on where AI can support your business and how to implement it responsibly.",
     benefit: "Invest in the right AI opportunities.",
@@ -207,7 +195,7 @@ const additionalServices = [
   {
     icon: Headphones,
     title: "AI and Automation Support",
-    price: "From P1,000/month",
+    price: "",
     description:
       "Ongoing monitoring, optimisation, troubleshooting, workflow improvements, and support.",
     benefit: "Keep your systems useful, updated, and improving over time.",
@@ -215,36 +203,18 @@ const additionalServices = [
 ];
 
 const processSteps = [
-  {
-    number: "01",
-    title: "Discover",
-    description:
-      "We understand your business, current processes, and operational challenges.",
-  },
-  {
-    number: "02",
-    title: "Audit",
-    description:
-      "We identify bottlenecks, repetitive work, and automation opportunities.",
-  },
-  {
-    number: "03",
-    title: "Design",
-    description:
-      "We create a practical solution around your priorities and goals.",
-  },
-  {
-    number: "04",
-    title: "Implement",
-    description:
-      "We build, connect, test, and launch the required systems.",
-  },
-  {
-    number: "05",
-    title: "Optimise",
-    description:
-      "We support improvements and help your systems continue creating value.",
-  },
+  { number: "01", title: "Understand", description: "We learn how your business runs today and how your customers actually book, order and pay." },
+  { number: "02", title: "Identify", description: "We find the leak that costs the most, in time, money or lost customers, and put a number on it." },
+  { number: "03", title: "Design", description: "We plan the smallest system that fixes it and agree the monthly fee based on its value." },
+  { number: "04", title: "Build & launch", description: "We build, test and launch it, and show your team how it works." },
+  { number: "05", title: "Support", description: "We look after it, report the results every month and make one improvement each month." },
+];
+
+const pricingPoints = [
+  { title: "No setup fee", text: "You don't pay a large amount up front for the build." },
+  { title: "One monthly fee", text: "Priced on the value of the problem we fix, worked out with your own numbers in the audit." },
+  { title: "3-month minimum", text: "The first month is paid before we start building, then it's month to month." },
+  { title: "Results every month", text: "Every plan includes support, a monthly results report and one improvement." },
 ];
 
 const Services = () => {
@@ -255,7 +225,7 @@ const Services = () => {
         <div className="container mx-auto max-w-5xl px-4 text-center">
           <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm text-primary">
             <Zap className="h-4 w-4" />
-            AI • Automation • Digital Transformation
+            AI • Automation • WhatsApp • Websites
           </div>
 
           <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">
@@ -295,12 +265,12 @@ const Services = () => {
             </p>
 
             <h2 className="mb-4 text-3xl font-bold md:text-5xl">
-              Choose the level of transformation your business needs.
+              Start with the one problem costing you the most.
             </h2>
 
             <p className="text-muted-foreground">
-              Start with a focused system or work with us to connect multiple
-              areas of your business through AI and automation.
+              Most clients start with one system, then add the next once the first one
+              is paying for itself.
             </p>
           </div>
 
@@ -319,7 +289,7 @@ const Services = () => {
                 >
                   {pkg.featured && (
                     <div className="absolute right-5 top-5 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-                      Popular
+                      Most requested
                     </div>
                   )}
 
@@ -370,10 +340,18 @@ const Services = () => {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Prices are starting prices. Final investment depends on the
-            business requirements, complexity, integrations, and support
-            required.
+            The monthly fee depends on the size of the problem and what we connect.
+            You'll see the number and how we got to it in your plan before you decide.
           </p>
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {pricingPoints.map((pt) => (
+              <GlowCard key={pt.title}>
+                <h3 className="mb-2 text-lg font-bold text-primary">{pt.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{pt.text}</p>
+              </GlowCard>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -390,8 +368,8 @@ const Services = () => {
             </h2>
 
             <p className="text-muted-foreground">
-              Select the individual service your business needs, or combine
-              several services into a larger transformation project.
+              Every service is scoped in the free audit and priced the same way:
+              one monthly fee, no setup fee.
             </p>
           </div>
 
@@ -406,9 +384,11 @@ const Services = () => {
                       <Icon className="h-5 w-5" />
                     </div>
 
-                    <span className="text-right text-sm font-semibold text-primary">
-                      {service.price}
-                    </span>
+                    {service.price && (
+                      <span className="text-right text-sm font-semibold text-primary">
+                        {service.price}
+                      </span>
+                    )}
                   </div>
 
                   <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
@@ -439,7 +419,7 @@ const Services = () => {
             </p>
 
             <h2 className="mb-4 text-3xl font-bold md:text-5xl">
-              From business challenges to intelligent systems.
+              Problem first, then technology.
             </h2>
 
             <p className="text-muted-foreground">
