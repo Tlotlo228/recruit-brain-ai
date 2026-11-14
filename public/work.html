@@ -34,8 +34,8 @@
     </div>
   </div>
 
-  <section class="stories" aria-labelledby="demos-h">
-    <div class="wrap">
+  <section class="stories pinned" aria-labelledby="demos-h">
+    <div class="pin"><div class="wrap">
       <div class="head">
         <span class="eyebrow">Live demos</span>
         <h2 class="h2" id="demos-h">What we've built</h2>
@@ -45,24 +45,26 @@
         <div class="collage"></div>
       </div>
       <div class="pills" role="tablist" aria-label="Choose a demo"></div>
-      <p class="hint">Use ← → to move between demos</p>
-    </div>
+      <div class="progress-rail" aria-hidden="true"></div>
+      <p class="hint">Scroll or use ← → to move between demos</p>
+    </div></div>
   </section>
 
-  <section class="stories" aria-labelledby="mentor-h">
-    <div class="wrap">
+  <section class="stories pinned" aria-labelledby="mentor-h">
+    <div class="pin"><div class="wrap">
       <div class="head">
-        <span class="eyebrow">AI mentorship</span>
+        <span class="eyebrow">AI training</span>
         <h2 class="h2" id="mentor-h">Our mentees, in their own words</h2>
-        <p style="max-width:640px;margin:0">Alongside client work, our founder Tlotlo Johane mentors people on how to use AI in their work and studies. These are mentees, not paying clients, and they agreed to share their videos here.</p>
+        <p style="max-width:640px;margin:0">Alongside client work, Tlotlo Johane and the BIYU team train people to use AI in their work and studies. These are mentees from our training, not paying clients, and they agreed to share their videos here.</p>
       </div>
       <div class="stage" data-stories="mentees">
         <div class="storycard" aria-live="polite"></div>
         <div class="collage"></div>
       </div>
       <div class="pills" role="tablist" aria-label="Choose a mentee"></div>
-      <p class="hint">Use ← → to move between mentees</p>
-    </div>
+      <div class="progress-rail" aria-hidden="true"></div>
+      <p class="hint">Scroll or use ← → to move between mentees</p>
+    </div></div>
   </section>
 
   <section>
@@ -101,107 +103,176 @@ const DATA = {
     { key: "BURGERS", meta: "Restaurant · Francistown · Client", name: "Burgers Tarven", org: "burgers-tavern.vercel.app",
       text: "Their customers already ordered and booked on WhatsApp. So instead of replacing WhatsApp, we built the website around it.",
       built: "Table requests that land in the restaurant's WhatsApp, a menu with a cart, payment by Orange Money, MyZaka or Pay to Cell, and it installs on a phone like an app.",
-      url: "https://burgers-tavern.vercel.app", feat: "/media/demo-burgers.jpg", floats: [["/media/demo-burgers-m.jpg", "On a phone", 1]] },
+      url: "https://burgers-tavern.vercel.app", feat: "/media/demo-burgers.jpg", floats: [["/media/demo-burgers-s1.jpg", "The intro"], ["/media/demo-burgers-m.jpg", "On a phone", 1], ["/media/demo-burgers-s2.jpg", "Scroll story"]] },
     { key: "GLOW SPOT", meta: "Beauty studio · Gaborone · Client", name: "Glow Spot BW", org: "glowspotbw.vercel.app",
       text: "Clients came once and didn't come back. Now every visit starts a simple return loop.",
       built: "A booking website, a QR check-in at the front desk, and a reminder email three weeks after each visit with one tap to book again. Every return visit is tracked.",
-      url: "https://glowspotbw.vercel.app", feat: "/media/demo-glowspot.jpg", floats: [["/media/demo-glowspot-m.jpg", "On a phone", 1]] },
+      url: "https://glowspotbw.vercel.app", feat: "/media/demo-glowspot.jpg", floats: [["/media/demo-glowspot-s1.jpg", "Services"], ["/media/demo-glowspot-m.jpg", "On a phone", 1], ["/media/demo-glowspot-s2.jpg", "Gallery"], ["/media/demo-glowspot-s3.jpg", "Book now"]] },
     { key: "CRĒO", meta: "Study abroad & recruitment · Client", name: "Crēo Consultancy", org: "creoconsultancy.org",
       text: "Enquiries went cold before anyone replied. Now every enquiry gets an answer straight away.",
       built: "A website with an enquiry form that replies instantly, sends follow-up emails, and gives the owner a daily list of one-tap WhatsApp messages for leads who haven't booked yet.",
-      url: "https://creoconsultancy.org", feat: "/media/demo-creo.jpg", floats: [] },
+      url: "https://creoconsultancy.org", feat: "/media/demo-creo.jpg", floats: [["/media/demo-creo-s3.jpg", "Their stories"]] },
     { key: "ACE-IT", meta: "Recruitment platform · Botswana · Client project", name: "ACE-IT Botswana Connect", org: "ace-bots.lovable.app",
       text: "A recruitment platform where candidates upload a CV and AI fills in their profile for them to check.",
       built: "AI CV reading for PDF, Word and scanned CVs, a candidate profile they review before saving, and employer access to applicants and their CVs.",
-      url: "https://ace-bots.lovable.app", feat: "/media/demo-aceit.jpg", floats: [] },
+      url: "https://ace-bots.lovable.app", feat: "/media/demo-aceit.jpg", floats: [["/media/demo-aceit-s1.jpg", "AI hiring"], ["/media/demo-aceit-m.jpg", "On a phone", 1], ["/media/demo-aceit-s2.jpg", "Portals"], ["/media/demo-aceit-s3.jpg", "Pricing"]] },
     { key: "REFRESHING", meta: "Massage & beauty · Francistown · Demo", name: "Refreshing Parlour", org: "Demo, not yet a client",
       text: "A parlour with no website or booking system. We built a demo to show the owner what it could look like.",
       built: "Services and prices on one page, and booking that goes straight to the parlour's WhatsApp.",
-      url: "https://refreshing-parlour.vercel.app", feat: "/media/demo-refreshing.jpg", floats: [["/media/demo-refreshing-m.jpg", "On a phone", 1]] },
+      url: "https://refreshing-parlour.vercel.app", feat: "/media/demo-refreshing.jpg", floats: [["/media/demo-refreshing-s1.jpg", "Services"], ["/media/demo-refreshing-m.jpg", "On a phone", 1], ["/media/demo-refreshing-s2.jpg", "Treatments"], ["/media/demo-refreshing-s3.jpg", "Book on WhatsApp"]] },
     { key: "CEDA PORTAL", meta: "Our own build · Hackathon entry · Nov 2026", name: "Innovation Portal", org: "Built by BIYU for the CEDA Innovation Hackathon",
       text: "A prototype for submitting, scoring and tracking innovation applications fairly.",
       built: "Four roles, blind scoring, revision rounds, reports and an audit trail, with a privacy and data-protection page.",
       url: "https://biyu-innovation-portal.vercel.app", feat: "/media/demo-ceda.jpg", floats: [["/media/demo-ceda-m.jpg", "On a phone", 1]] }
   ],
   mentees: [
-    { key: "PRECIOUS", meta: "AI mentorship · Botswana · 2026", name: "Precious", org: "Mentee",
-      text: "Precious took part in BIYU's AI mentorship, learning how to use AI tools in her day-to-day work.",
+    { key: "SARAH", meta: "AI training · Botswana · 2026", name: "Sarah", org: "Mentee",
+      text: "Sarah trained with Tlotlo Johane and the BIYU team, learning how to use AI tools in her day-to-day work.",
       built: "Press play to hear her experience in her own words.",
-      video: "/media/precious.mp4", poster: "/media/precious-1.jpg", tall: true,
-      floats: [["/media/precious-2.jpg", "Precious"], ["/media/precious-3.jpg", "In her words"], ["/media/precious-4.jpg", "AI mentorship"]] },
-    { key: "MEMORY", meta: "AI mentorship · Botswana · 2026", name: "Memory", org: "Mentee",
-      text: "Memory took part in BIYU's AI mentorship, learning how to use AI tools in her day-to-day work.",
+      video: "/media/sarah.mp4", poster: "/media/sarah-1.jpg", tall: true,
+      floats: [["/media/sarah-2.jpg", "Sarah"], ["/media/sarah-3.jpg", "In her words"], ["/media/sarah-4.jpg", "AI training"]] },
+    { key: "MEMORY", meta: "AI training · Botswana · 2026", name: "Memory", org: "Mentee",
+      text: "Memory trained with Tlotlo Johane and the BIYU team, learning how to use AI tools in her day-to-day work.",
       built: "Press play to hear her experience in her own words.",
       video: "/media/memory.mp4", poster: "/media/memory-1.jpg", tall: true,
-      floats: [["/media/memory-2.jpg", "Memory"], ["/media/memory-3.jpg", "In her words"], ["/media/memory-4.jpg", "AI mentorship"]] },
-    { key: "KONDANANI", meta: "AI mentorship · Botswana · 2026", name: "Kondanani Banda", org: "Mentee",
-      text: "Kondanani took part in BIYU's AI mentorship, learning how to use AI tools in his day-to-day work.",
+      floats: [["/media/memory-2.jpg", "Memory"], ["/media/memory-3.jpg", "In her words"], ["/media/memory-4.jpg", "AI training"]] },
+    { key: "KONDANANI", meta: "AI training · Botswana · 2026", name: "Kondanani Banda", org: "Mentee",
+      text: "Kondanani trained with Tlotlo Johane and the BIYU team, learning how to use AI tools in his day-to-day work.",
       built: "Press play to hear his experience in his own words.",
       video: "/media/kondanani.mp4", poster: "/media/kondanani-1.jpg", tall: false,
-      floats: [["/media/kondanani-2.jpg", "Kondanani"], ["/media/kondanani-3.jpg", "In his words"], ["/media/kondanani-4.jpg", "AI mentorship"]] }
+      floats: [["/media/kondanani-2.jpg", "Kondanani"], ["/media/kondanani-3.jpg", "In his words"], ["/media/kondanani-4.jpg", "AI training"]] }
   ]
 };
 
 (function () {
   const pad = n => String(n).padStart(2, "0");
   const el = (tag, attrs = {}, text) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (text != null) e.textContent = text; return e; };
+  const SVGNS = "http://www.w3.org/2000/svg";
   const PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const desktop = () => innerWidth > 900;
 
   document.querySelectorAll("[data-stories]").forEach(stage => {
-    const kind = stage.dataset.stories, items = DATA[kind];
+    const kind = stage.dataset.stories, items = DATA[kind], N = items.length;
     const card = stage.querySelector(".storycard"), collage = stage.querySelector(".collage");
-    const section = stage.closest("section"), pills = section.querySelector(".pills");
-    let cur = 0;
+    const section = stage.closest("section"), pills = section.querySelector(".pills"), rail = section.querySelector(".progress-rail");
+    let cur = -1;
 
     items.forEach((it, i) => {
       const b = el("button", { type: "button", class: "pill", role: "tab", "aria-selected": "false" });
       b.innerHTML = "<b>" + pad(i + 1) + "</b>";
       b.appendChild(document.createTextNode(it.key));
-      b.addEventListener("click", () => show(i));
+      b.addEventListener("click", () => go(i));
       pills.appendChild(b);
+      rail.appendChild(el("i"));
     });
 
+    // Pinned scroll: the section is several screens tall; scrolling inside it moves between stories.
+    const pinned = () => desktop() && !reduce;
+    function sizeSection() { section.style.height = pinned() ? (100 + N * 70) + "vh" : ""; }
+    function range() { const top = section.getBoundingClientRect().top + scrollY; return { top, len: section.offsetHeight - innerHeight }; }
+    function go(i) {
+      i = (i + N) % N;
+      if (pinned()) { const r = range(); scrollTo({ top: r.top + r.len * (i + 0.5) / N, behavior: "smooth" }); }
+      else show(i);
+    }
+    function onScroll() {
+      if (!pinned()) return;
+      const r = range(), p = (scrollY - r.top) / Math.max(1, r.len);
+      if (p < -0.2 || p > 1.2) return;
+      show(Math.min(N - 1, Math.max(0, Math.floor(p * N))));
+    }
+
+    function wires() {
+      const old = collage.querySelector(".wires");
+      if (old) old.remove();
+      if (!desktop()) return;
+      const feat = collage.querySelector(".feat");
+      if (!feat) return;
+      const box = collage.getBoundingClientRect(), fb = feat.getBoundingClientRect();
+      const cx = fb.left + fb.width / 2 - box.left, cy = fb.top + fb.height / 2 - box.top;
+      const svg = document.createElementNS(SVGNS, "svg");
+      svg.setAttribute("class", "wires");
+      svg.setAttribute("aria-hidden", "true");
+      svg.innerHTML = '<defs><linearGradient id="wireGrad" x1="0" x2="1"><stop offset="0" stop-color="#BF8A40" stop-opacity=".15"/><stop offset=".5" stop-color="#E8C27A" stop-opacity=".95"/><stop offset="1" stop-color="#BF8A40" stop-opacity=".15"/></linearGradient></defs>';
+      collage.querySelectorAll(".float").forEach((f, j) => {
+        const r = f.getBoundingClientRect();
+        const x = r.left + r.width / 2 - box.left, y = r.top + r.height / 2 - box.top;
+        const sx = cx + Math.sign(x - cx) * fb.width * 0.42, sy = cy + (y - cy) * 0.35;
+        const mx = (sx + x) / 2;
+        const d = "M" + sx + "," + sy + " C" + mx + "," + sy + " " + mx + "," + y + " " + x + "," + y;
+        const p = document.createElementNS(SVGNS, "path");
+        p.setAttribute("d", d);
+        svg.appendChild(p);
+        const n = document.createElementNS(SVGNS, "circle");
+        n.setAttribute("class", "node"); n.setAttribute("r", "3.5"); n.setAttribute("cx", sx); n.setAttribute("cy", sy);
+        svg.appendChild(n);
+        if (!reduce) {
+          const s = document.createElementNS(SVGNS, "circle");
+          s.setAttribute("class", "spark"); s.setAttribute("r", "2.6");
+          const am = document.createElementNS(SVGNS, "animateMotion");
+          am.setAttribute("dur", (2.4 + j * 0.5) + "s"); am.setAttribute("repeatCount", "indefinite"); am.setAttribute("path", d);
+          s.appendChild(am);
+          svg.appendChild(s);
+        }
+      });
+      collage.insertBefore(svg, collage.children[1] || null);
+      requestAnimationFrame(() => svg.classList.add("on"));
+    }
+
     function show(i) {
-      cur = (i + items.length) % items.length;
+      if (i === cur) return;
+      cur = i;
       const it = items[cur];
       pills.querySelectorAll(".pill").forEach((p, j) => p.setAttribute("aria-selected", String(j === cur)));
-      // story card
-      card.textContent = "";
-      card.classList.remove("swap"); void card.offsetWidth; card.classList.add("swap");
-      card.appendChild(el("div", { class: "count" }, pad(cur + 1) + " / " + pad(items.length)));
-      card.appendChild(el("div", { class: "meta" }, it.meta));
-      card.appendChild(el("h3", {}, it.name));
-      card.appendChild(el("div", { class: "org" }, it.org));
-      card.appendChild(el("p", {}, it.text));
-      const built = el("p", { class: "built" });
-      if (it.video) built.textContent = it.built;
-      else { built.appendChild(el("b", {}, "What we built: ")); built.appendChild(document.createTextNode(it.built)); }
-      card.appendChild(built);
-      if (it.url) {
-        const a = el("a", { class: "cta", href: it.url, target: "_blank", rel: "noopener" });
-        a.innerHTML = '<span class="dot">↗</span>';
-        a.appendChild(document.createTextNode("Open the live demo"));
-        card.appendChild(a);
-      }
-      // collage
+      rail.querySelectorAll("i").forEach((r, j) => r.classList.toggle("on", j <= cur));
+      section.querySelectorAll("video").forEach(v => v.pause());
+
+      card.classList.add("enter");
+      setTimeout(() => {
+        card.textContent = "";
+        card.appendChild(el("div", { class: "count" }, pad(cur + 1) + " / " + pad(N)));
+        card.appendChild(el("div", { class: "meta" }, it.meta));
+        card.appendChild(el("h3", {}, it.name));
+        card.appendChild(el("div", { class: "org" }, it.org));
+        card.appendChild(el("p", {}, it.text));
+        const built = el("p", { class: "built" });
+        if (it.video) built.textContent = it.built;
+        else { built.appendChild(el("b", {}, "What we built: ")); built.appendChild(document.createTextNode(it.built)); }
+        card.appendChild(built);
+        if (it.url) {
+          const a = el("a", { class: "cta", href: it.url, target: "_blank", rel: "noopener" });
+          a.innerHTML = '<span class="dot">&#8599;</span>';
+          a.appendChild(document.createTextNode("Open the live demo"));
+          card.appendChild(a);
+        }
+        card.classList.remove("enter");
+      }, reduce ? 0 : 180);
+
       collage.textContent = "";
       collage.className = "collage" + (it.tall ? " tall" : "");
-      const slots = ["f1", "f2", "f3", "f4"];
-      (it.floats || []).forEach((f, j) => {
-        const fl = el("div", { class: "float swap " + slots[j] + (f[2] ? " f-m" : "") });
+      collage.appendChild(el("div", { class: "ring", "aria-hidden": "true" }));
+      const slots = ["f1", "f2", "f3", "f4"], depth = [14, 10, 12, 8];
+      (it.floats || []).slice(0, 4).forEach((f, j) => {
+        const fl = el("div", { class: "float " + slots[j] + (f[2] ? " f-m" : "") });
+        fl.style.setProperty("--d", depth[j] + "px");
+        fl.style.setProperty("--bd", (j * -1.3) + "s");
+        fl.style.setProperty("--fx", j % 2 ? "-60%" : "60%");
+        fl.style.setProperty("--fy", j < 2 ? "50%" : "-50%");
         fl.appendChild(el("img", { src: f[0], alt: "", loading: "lazy" }));
         fl.appendChild(el("span", {}, f[1]));
         collage.appendChild(fl);
+        setTimeout(() => fl.classList.add("in"), reduce ? 0 : 120 + j * 110);
       });
-      const feat = el("div", { class: "feat" + (it.tall ? " tall" : "") });
+      const feat = el("div", { class: "feat enter" + (it.tall ? " tall" : "") });
       if (it.video) {
-        const v = el("video", { src: it.video, poster: it.poster, preload: "none", playsinline: "", controls: "" });
-        v.setAttribute("aria-label", it.name + "'s video about BIYU's AI mentorship");
-        v.removeAttribute("controls");
+        const v = el("video", { src: it.video, poster: it.poster, preload: "none", playsinline: "" });
+        v.setAttribute("aria-label", it.name + "'s video about BIYU's AI training");
         const btn = el("button", { type: "button", class: "play", "aria-label": "Play " + it.name + "'s video" });
         btn.innerHTML = PLAY;
         btn.addEventListener("click", () => { v.setAttribute("controls", ""); btn.remove(); v.play(); });
-        feat.appendChild(v); feat.appendChild(btn);
+        feat.appendChild(v);
+        feat.appendChild(btn);
       } else {
         const a = el("a", { href: it.url, target: "_blank", rel: "noopener", "aria-label": "Open the " + it.name + " live demo" });
         a.appendChild(el("img", { src: it.feat, alt: "Screenshot of the " + it.name + " website" }));
@@ -209,17 +280,27 @@ const DATA = {
         feat.appendChild(el("span", { class: "label" }, it.name));
       }
       collage.appendChild(feat);
-      section.querySelectorAll("video").forEach(v => { if (!collage.contains(v)) v.pause(); });
+      requestAnimationFrame(() => requestAnimationFrame(() => feat.classList.remove("enter")));
+      setTimeout(wires, reduce ? 0 : 1000);
     }
 
-    // arrow keys while the section is on screen
+    collage.addEventListener("mousemove", e => {
+      const r = collage.getBoundingClientRect();
+      collage.style.setProperty("--mx", ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+      collage.style.setProperty("--my", ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
+    });
+    collage.addEventListener("mouseleave", () => { collage.style.setProperty("--mx", 0); collage.style.setProperty("--my", 0); });
+
     let inView = false;
-    new IntersectionObserver(es => { inView = es[0].isIntersecting && es[0].intersectionRatio > 0.5; }, { threshold: [0, 0.5, 1] }).observe(stage);
+    new IntersectionObserver(es => { inView = es[0].isIntersecting; }, { threshold: 0.4 }).observe(stage);
     document.addEventListener("keydown", e => {
       if (!inView || /input|textarea|select/i.test(document.activeElement.tagName)) return;
-      if (e.key === "ArrowRight") { show(cur + 1); e.preventDefault(); }
-      if (e.key === "ArrowLeft") { show(cur - 1); e.preventDefault(); }
+      if (e.key === "ArrowRight") { go(cur + 1); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { go(cur - 1); e.preventDefault(); }
     });
+    addEventListener("scroll", onScroll, { passive: true });
+    addEventListener("resize", () => { sizeSection(); wires(); });
+    sizeSection();
     show(0);
   });
 })();
