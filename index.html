@@ -556,7 +556,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <details><summary>Do I have to buy anything afterwards?</summary><p>No. If a written roadmap or a build would help, we explain the options and the price, and you decide. There's no pressure either way.</p></details>
       <details><summary>What if AI isn't the answer for my business?</summary><p>Then we'll tell you. Sometimes the fix is a simpler process, a WhatsApp template or a change in who does what. We'd rather recommend the smallest thing that works than sell you technology you don't need.</p></details>
       <details><summary>Is this only for big companies?</summary><p>No. We work with small and mid-sized businesses in Botswana and beyond, from salons and restaurants to consultancies and print shops.</p></details>
-      <details id="privacy"><summary>What do you do with my details?</summary><p>We use them only to arrange and deliver your consultation. If you tick the optional box, we'll also send you occasional emails, and every email has an unsubscribe link. We don't sell or share your details. You can ask us to delete them at any time by emailing info.biyu.ai@gmail.com. This follows Botswana's Data Protection Act, 2024. Full details: <a href="/privacy">Privacy &amp; Terms</a>.</p></details>
+      <details id="privacy"><summary>What do you do with my details?</summary><p>We use them only to arrange and deliver your consultation. If you tick the optional box, we'll also send you occasional emails, and every email has an unsubscribe link. We don't sell or share your details. You can ask us to delete them at any time by emailing info.biyu.ai@gmail.com. This follows Botswana's Data Protection Act, 2024. Full details: <a href="/privacy">Privacy &amp; Terms</a><a href="#" data-cookie-settings>Cookie settings</a>.</p></details>
     </div>
   </section>
 </main>
@@ -719,7 +719,7 @@ const CONFIG = {
     try {
       const res = await fetch(CONFIG.webhookUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error("HTTP " + res.status);
-      if (window.fbq) fbq("track", "Lead", { value: 250, currency: "BWP" });
+      if (window.fbq) fbq("track", "Lead", { value: 250, currency: "BWP" }, { eventID: payload.reference });
       showDone(payload);
     } catch (err) {
       alertBox.innerHTML = "We couldn't send your enquiry just now. Please try again, or email us at <a href='mailto:info.biyu.ai@gmail.com'>info.biyu.ai@gmail.com</a>.";
@@ -769,5 +769,6 @@ const CONFIG = {
   w.addEventListener("input", calc); v.addEventListener("input", calc); calc();
 })();
 </script>
+<script src="/consent.js" defer></script>
 </body>
 </html>

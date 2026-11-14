@@ -35,7 +35,7 @@
 
   <section class="legal">
     <div class="wrap narrow">
-      <p class="updated">Last updated: 14 November 2026</p>
+      <p class="updated">Last updated: 14 November 2026 (cookies section)</p>
 
       <h2 id="privacy">Privacy</h2>
       <h3>Who we are</h3>
@@ -63,8 +63,9 @@
       <h3>How long we keep it</h3>
       <p>We keep enquiry details for up to 24 months after our last contact with you, unless you become a client, in which case we keep what we need for as long as we work together and as the law requires (for example, invoices). You can ask us to delete your details sooner at any time.</p>
 
-      <h3>Cookies and tracking</h3>
-      <p>This website does not use advertising or analytics cookies today. The booking form keeps your answers only in your browser until you send them. If we add advertising measurement (for example the Meta Pixel) in future, we will ask for your permission first with a clear choice to say no, and update this page.</p>
+      <h3 id="cookies">Cookies and tracking</h3>
+      <p>We use one optional tool: the <b>Meta Pixel</b>, which tells us which of our Facebook and Instagram adverts lead to enquiries. It only runs if you press <b>Accept</b> on our cookie banner. If you press <b>No thanks</b>, nothing is tracked. Your choice is saved in your browser, and you can change it any time with <b>Cookie settings</b> at the bottom of every page.</p>
+      <p>If you accept and then book, we tell Meta that an enquiry happened (with your booking reference, not your name). The booking form keeps your answers only in your browser until you send them.</p>
 
       <h3>Other services this site uses</h3>
       <ul class="dots">
@@ -112,9 +113,10 @@
 <footer>
   <div class="wrap">
     <span>&copy; <span id="yr">2026</span> BIYU AI Agency (Pty) Ltd · CIPA BW00009940055 · Gaborone · Francistown</span>
-    <nav aria-label="Footer"><a href="/">Home</a><a href="/work">Work</a><a href="/about">About</a><a href="/privacy">Privacy &amp; Terms</a><a href="mailto:info.biyu.ai@gmail.com">info.biyu.ai@gmail.com</a></nav>
+    <nav aria-label="Footer"><a href="/">Home</a><a href="/work">Work</a><a href="/about">About</a><a href="/privacy">Privacy &amp; Terms</a><a href="#" data-cookie-settings>Cookie settings</a><a href="mailto:info.biyu.ai@gmail.com">info.biyu.ai@gmail.com</a></nav>
   </div>
 </footer>
 <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script src="/consent.js" defer></script>
 </body>
 </html>
