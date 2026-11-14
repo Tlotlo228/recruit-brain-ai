@@ -330,7 +330,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <h2 style="font-size:clamp(24px,3.4vw,34px);margin:10px 0 22px">From enquiry to a clear next step</h2>
       <div class="grid3" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
         <div class="card"><span class="num">01</span><h3>Answer a few quick questions</h3><p>Tap your answers below. It takes about 60 seconds.</p></div>
-        <div class="card"><span class="num">02</span><h3>Pay P250</h3><p>We send you payment options by email and WhatsApp. In Botswana: Orange Money, MyZaka or bank transfer. Elsewhere: international payment options.</p></div>
+        <div class="card"><span class="num">02</span><h3>Pay P250</h3><p>We send you payment options by email and WhatsApp. In Botswana: Orange Money or Pay to Cell. Elsewhere: international payment options.</p></div>
         <div class="card"><span class="num">03</span><h3>Meet your consultant</h3><p>Once payment is confirmed, you pick a time for a 30-minute call. Rather type? Do it by WhatsApp chat instead.</p></div>
         <div class="card"><span class="num">04</span><h3>Know your next step</h3><p>You leave knowing where the leak is, what fixing it is worth and the simplest way to fix it.</p></div>
       </div>
@@ -570,7 +570,8 @@ const CONFIG = {
   webhookUrl: "https://n8n-dfxs.srv1906672.hstgr.cloud/webhook/biyu-consultation",
   price: "P250",
   payments: [
-    { method: "Orange Money", detail: "" },
+    { method: "Orange Money", detail: "Send P250 to +267 72 382 004" },
+    { method: "Pay to Cell", detail: "From your bank app to 72 382 004" },
     { method: "MyZaka", detail: "" },
     { method: "Bank transfer (EFT)", detail: "" }
   ]
