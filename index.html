@@ -1,31 +1,772 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BIYU AI Agency | AI and automation systems for Botswana businesses</title>
-    <meta name="description" content="BIYU AI Agency builds booking, ordering, follow-up and reminder systems for businesses in Botswana, on WhatsApp, email and the web. Free AI audit. No setup fee.">
-    <meta name="author" content="BIYU AI Agency" />
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BIYU AI Agency | Stop losing time and customers</title>
+<meta name="description" content="Tell us where your business is losing time or customers. Book a P250 consultation by call or WhatsApp chat. Clear next step, or your money back.">
+<meta name="theme-color" content="#08120F">
+<link rel="icon" href="/logo.png">
+<link rel="canonical" href="https://biyuaiagency.com/">
+<meta property="og:title" content="Book a BIYU consultation">
+<meta property="og:description" content="Find the one problem costing your business time or customers, and the simplest way to fix it.">
+<meta property="og:image" content="https://biyuaiagency.com/logo.png">
+<meta property="og:url" content="https://biyuaiagency.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08120F;--surface:#0D1C17;--raised:#13261F;--border:#1D302A;
+  --gold:#BF8A40;--gold-soft:#C8A771;--heading:#EDE7DE;--body:#A9BAB3;--muted:#7E9A91;
+  --danger:#E07A6A;--ok:#6FBF8E;
+  --font-head:"Space Grotesk","Inter",system-ui,sans-serif;--font-body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.6 var(--font-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-head);color:var(--heading);line-height:1.15;margin:0}
+a{color:var(--gold-soft)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid rgba(191,138,64,.35)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:40px;height:40px;border-radius:50%}
+.brand b{font-family:var(--font-head);font-size:20px;color:var(--heading)}
+.brand b span{color:var(--gold)}
+.eyebrow{display:inline-block;font:500 12px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pill{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:8px 14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;background:var(--gold);color:var(--bg);font:600 16px/1 var(--font-body);padding:16px 22px;border-radius:10px;text-decoration:none;min-height:52px}
+.btn:hover{filter:brightness(1.07)}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn.ghost{background:transparent;color:var(--heading);border:1px solid var(--border)}
+.hero{position:relative;overflow:hidden;padding:64px 0 40px}
+.hero svg.net{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(32px,5.4vw,54px);max-width:780px;margin:18px 0 0}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:clamp(17px,2vw,19px);max-width:640px;margin:18px 0 28px}
+.price{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.price strong{font:700 28px/1 var(--font-head);color:var(--gold)}
+.price small{color:var(--muted)}
+section{padding:44px 0}
+.grid3{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px}
+.card h3{font-size:18px;margin:10px 0 8px}
+.num{font:700 14px/1 var(--font-head);color:var(--gold)}
+.two{display:grid;gap:28px;grid-template-columns:1fr 1.15fr;align-items:start}
+ul.check{list-style:none;padding:0;margin:16px 0 0}
+ul.check li{padding:8px 0 8px 30px;position:relative}
+ul.check li::before{content:"✓";position:absolute;left:0;top:8px;width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--bg);font:700 12px/20px var(--font-body);text-align:center}
 
-    
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/dpdGRlutiMOxUVrX6a392e8rJY33/social-images/social-1777316464756-WhatsApp_Image_2026-03-01_at_13.41.00.webp">
+/* Tiers */
+.tier{display:flex;flex-direction:column}
+.tier .amt{font:700 30px/1 var(--font-head);color:var(--gold);margin:14px 0 4px}
+.tier .amt small{font:400 14px/1 var(--font-body);color:var(--muted)}
+.tier p{margin:8px 0 18px}
+.tier .btn{margin-top:auto}
+.tier.main{border-color:var(--gold)}
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/dpdGRlutiMOxUVrX6a392e8rJY33/social-images/social-1777316464756-WhatsApp_Image_2026-03-01_at_13.41.00.webp">
-    
-  
-  
-  
-  <meta property="og:title" content="BIYU AI Agency">
-  <meta name="twitter:title" content="BIYU AI Agency">
-  <meta property="og:description" content="AI and automation systems for businesses in Botswana. Free AI audit. No setup fee.">
-  <meta name="twitter:description" content="AI and automation systems for businesses in Botswana. Free AI audit. No setup fee.">
+/* Fit, leak calculator, ladder, proof */
+.h2{font-size:clamp(26px,3.8vw,38px);letter-spacing:-.02em;margin:10px 0 14px}
+.intro{max-width:640px;margin:0 0 26px}
+.fit{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.fit ul{list-style:none;padding:0;margin:12px 0 0}
+.fit li{position:relative;padding:7px 0 7px 30px}
+.fit li svg{position:absolute;left:0;top:10px;width:18px;height:18px}
+.fit .yes svg{color:var(--gold)}
+.fit .no svg{color:var(--muted)}
+.leak{display:grid;gap:28px;grid-template-columns:1fr 1fr;align-items:center;background:linear-gradient(180deg,rgba(237,231,222,.045),rgba(237,231,222,.015));border:1px solid rgba(237,231,222,.08);border-radius:28px;padding:36px}
+.calc label{display:block;font:500 14px/1.3 var(--font-body);color:var(--heading);margin:0 0 8px}
+.calc .in{display:flex;align-items:center;gap:8px;background:rgba(8,18,15,.6);border:1px solid rgba(237,231,222,.10);border-radius:14px;padding:0 16px;margin-bottom:16px}
+.calc .in:focus-within{border-color:var(--gold);box-shadow:0 0 0 4px rgba(191,138,64,.16)}
+.calc .in span{color:var(--muted)}
+.calc input{flex:1;min-width:0;background:transparent;border:0;color:var(--heading);font:600 20px/1 var(--font-head);padding:14px 0;outline:none}
+.calc input::-webkit-outer-spin-button,.calc input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.calc input[type=number]{-moz-appearance:textfield}
+.result{text-align:center}
+.result .big{font:700 clamp(40px,7vw,64px)/1 var(--font-head);letter-spacing:-.03em;color:var(--gold);margin:8px 0}
+.result p{margin:6px 0}
+.result small{display:block;color:var(--muted);font-size:13px;margin-top:12px}
+.ladder{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);counter-reset:step}
+.rung{position:relative;display:flex;flex-direction:column}
+.rung .amt{font:700 30px/1 var(--font-head);color:var(--gold);margin:14px 0 4px;letter-spacing:-.02em}
+.rung .amt small{font:400 14px/1 var(--font-body);color:var(--muted);letter-spacing:0}
+.rung p{margin:8px 0 14px}
+.rung ol{margin:0 0 18px;padding-left:20px}
+.rung ol li{padding:3px 0}
+.rung .btn{margin-top:auto}
+.rung.main{border-color:var(--gold)}
+.rung .note{margin-top:auto;font-size:14px;color:var(--muted)}
+.work{display:grid;gap:20px;grid-template-columns:1.2fr 1fr;align-items:center}
+.work ul{margin:12px 0 0;padding-left:20px}
+@media (max-width:860px){.fit,.leak,.ladder,.work{grid-template-columns:1fr}.leak{padding:26px 20px;border-radius:22px}}
+
+.guar{display:flex;align-items:flex-start;gap:10px;margin:18px 0 0;font-size:15px;color:var(--body);max-width:640px}
+.guar svg{flex:none;width:22px;height:22px;color:var(--gold);margin-top:1px}
+.guar b{color:var(--heading);font-weight:600}
+.guarbox{display:flex;gap:18px;align-items:center;border:1px solid rgba(191,138,64,.45);background:rgba(191,138,64,.06);border-radius:22px;padding:26px 28px}
+.guarbox svg{flex:none;width:44px;height:44px;color:var(--gold)}
+.guarbox h3{font-size:20px;margin:0 0 6px}
+.guarbox p{margin:0}
+.townrow{display:none}
+.townrow.on{display:block;animation:stepIn .35s cubic-bezier(.2,.8,.2,1) both}
+.tiles.two{grid-template-columns:1fr 1fr}
+.tile small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.4}
+@media (max-width:560px){.guarbox{flex-direction:column;align-items:flex-start;padding:22px 20px}.tiles.two{grid-template-columns:1fr}}
+
+/* ---------- Step form (Apple-style) ---------- */
+#book{padding:72px 0 80px;background:radial-gradient(1200px 500px at 50% 0%,rgba(191,138,64,.10),transparent 60%)}
+.bookhead{text-align:center;max-width:720px;margin:0 auto 36px}
+.bookhead h2{font-size:clamp(30px,4.6vw,48px);font-weight:700;letter-spacing:-.025em;margin:12px 0 12px}
+.bookhead p{font-size:clamp(17px,2vw,19px);margin:0 auto;max-width:560px}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:20px 0 0;padding:0;list-style:none;font-size:14px;color:var(--body)}
+.perks li{display:flex;align-items:center;gap:8px}
+.perks svg{width:16px;height:16px;color:var(--gold)}
+.formshell{max-width:640px;margin:0 auto}
+form.sheet{position:relative;overflow:hidden;border-radius:28px;padding:40px;background:linear-gradient(180deg,rgba(237,231,222,.045),rgba(237,231,222,.015));border:1px solid rgba(237,231,222,.08);box-shadow:0 40px 80px -30px rgba(0,0,0,.7),inset 0 1px 0 rgba(237,231,222,.06);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.steptop{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:12px;letter-spacing:.01em}
+.segs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:34px}
+.segs i{height:4px;border-radius:99px;background:rgba(237,231,222,.10);overflow:hidden;position:relative}
+.segs i::after{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.segs i.on::after{transform:scaleX(1)}
+.step{display:none}
+.step.on{display:block;animation:stepIn .45s cubic-bezier(.2,.8,.2,1) both}
+.step.on.rev{animation-name:stepBack}
+@keyframes stepIn{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes stepBack{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+.step h2{font-size:clamp(24px,3.6vw,32px);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:8px}
+.step .hint{font-size:15px;color:var(--muted);margin:0 0 24px}
+.tiles{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-align:left;cursor:pointer;background:rgba(8,18,15,.6);color:var(--heading);border:1px solid rgba(237,231,222,.08);border-radius:18px;padding:18px;font:500 15px/1.35 var(--font-body);min-height:118px;transition:transform .2s cubic-bezier(.2,.8,.2,1),border-color .2s,background .2s,box-shadow .2s}
+.tile .ic{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:rgba(191,138,64,.12);color:var(--gold)}
+.tile .ic svg{width:22px;height:22px}
+.tile::after{content:"";position:absolute;top:14px;right:14px;width:22px;height:22px;border-radius:50%;border:1.5px solid rgba(237,231,222,.18);transition:all .2s}
+.tile:hover{transform:translateY(-2px);border-color:rgba(200,167,113,.45);box-shadow:0 12px 30px -16px rgba(0,0,0,.8)}
+.tile:active{transform:scale(.98)}
+.tile[aria-pressed="true"]{border-color:var(--gold);background:rgba(191,138,64,.10);box-shadow:0 0 0 3px rgba(191,138,64,.16)}
+.tile[aria-pressed="true"]::after{background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2308120F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat;border-color:var(--gold)}
+.tile:focus-visible,.chip:focus-visible,.btn:focus-visible,.linkbtn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sub{font:600 13px/1 var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:26px 0 12px}
+.hint+.sub{margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{cursor:pointer;background:rgba(8,18,15,.6);color:var(--heading);border:1px solid rgba(237,231,222,.10);border-radius:999px;padding:12px 18px;font:500 15px/1 var(--font-body);min-height:46px;transition:all .2s cubic-bezier(.2,.8,.2,1)}
+.chip:hover{border-color:rgba(200,167,113,.45)}
+.chip:active{transform:scale(.97)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.field{margin-bottom:12px}
+.float{position:relative}
+.float input,.float textarea{width:100%;background:rgba(8,18,15,.6);color:var(--heading);border:1px solid rgba(237,231,222,.10);border-radius:14px;padding:26px 16px 10px;font:17px/1.3 var(--font-body);transition:border-color .2s,box-shadow .2s}
+.float textarea{min-height:96px;resize:vertical}
+.float label{position:absolute;left:17px;top:18px;margin:0;font:400 17px/1.2 var(--font-body);color:var(--muted);pointer-events:none;transform-origin:left top;transition:transform .2s cubic-bezier(.2,.8,.2,1),color .2s}
+.float input:focus+label,.float input:not(:placeholder-shown)+label,.float textarea:focus+label,.float textarea:not(:placeholder-shown)+label{transform:translateY(-10px) scale(.74);color:var(--gold-soft)}
+.float input:focus,.float textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(191,138,64,.16)}
+.row2{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.row2{margin-bottom:12px}.row2 .field{margin-bottom:0}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;color:var(--body);font-weight:400;cursor:pointer;margin-top:6px}
+.consent input{appearance:none;-webkit-appearance:none;width:22px;height:22px;margin:0;flex:none;border-radius:7px;border:1.5px solid rgba(237,231,222,.25);background:transparent;cursor:pointer;transition:all .15s}
+.consent input:checked{background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2308120F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat;border-color:var(--gold)}
+.consent input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.opt{color:var(--muted)}
+.err{color:var(--danger);font-size:13px;margin:6px 2px 0;display:none}
+.field.bad .err,.stepErr.on{display:block}
+.stepErr{color:var(--danger);font-size:14px;margin-top:14px;display:none}
+.field.bad input,.field.bad textarea{border-color:var(--danger)}
+.field.bad .consent input{border-color:var(--danger)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:30px}
+.linkbtn{background:none;border:0;cursor:pointer;color:var(--body);font:500 16px/1 var(--font-body);padding:12px 4px;display:inline-flex;align-items:center;gap:6px}
+.linkbtn:hover{color:var(--heading)}
+.linkbtn[hidden]{display:inline-flex;visibility:hidden}
+.btn.pillbtn{border-radius:999px;padding:16px 28px;min-height:54px;font-size:17px;box-shadow:0 10px 30px -12px rgba(191,138,64,.6);transition:transform .2s cubic-bezier(.2,.8,.2,1),filter .2s}
+.btn.pillbtn:active{transform:scale(.97)}
+.summary{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 0}
+.summary span{font-size:12px;border:1px solid rgba(191,138,64,.35);border-radius:99px;padding:5px 11px;color:var(--gold-soft);background:rgba(191,138,64,.06)}
+.other{margin-top:12px;display:none}
+.other.on{display:block;animation:stepIn .35s cubic-bezier(.2,.8,.2,1) both}
+.formnote{font-size:13px;color:var(--muted);margin:18px 0 0;text-align:center}
+.alert{border:1px solid var(--danger);color:var(--heading);background:rgba(224,122,106,.08);border-radius:14px;padding:12px 14px;margin-bottom:16px;display:none}
+.done{display:none;text-align:center;padding:10px 0}
+.done.on{display:block;animation:stepIn .5s cubic-bezier(.2,.8,.2,1) both}
+.done h2{font-size:clamp(26px,3.6vw,34px);letter-spacing:-.02em;margin:18px 0 10px}
+.tick{width:76px;height:76px;margin:0 auto;display:block}
+.tick circle{stroke:var(--gold);stroke-width:3;fill:rgba(191,138,64,.08);stroke-dasharray:226;stroke-dashoffset:226;animation:draw .7s .1s cubic-bezier(.65,0,.35,1) forwards}
+.tick path{stroke:var(--gold);stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:48;stroke-dashoffset:48;animation:draw .4s .7s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ref{font:700 18px/1 var(--font-head);color:var(--gold);letter-spacing:.02em}
+.paylist{display:grid;gap:10px;margin:18px 0;text-align:left}
+.pay{background:rgba(8,18,15,.6);border:1px solid rgba(237,231,222,.08);border-radius:14px;padding:14px 16px}
+.pay b{color:var(--heading)}
+@media (max-width:560px){form.sheet{padding:26px 20px;border-radius:22px}.tile{min-height:104px;padding:14px;gap:10px;font-size:14px}.row2{grid-template-columns:1fr}.btn.pillbtn{flex:1}}
+@media (prefers-reduced-motion:reduce){.step.on,.done.on,.other.on{animation:none}.tick circle,.tick path{animation:none;stroke-dashoffset:0}.segs i::after,.tile,.chip{transition:none}}
+.faq details{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;color:var(--heading);font-weight:600}
+footer{border-top:1px solid var(--border);padding:24px 0 40px;font-size:14px;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:18px}
+footer a{color:var(--body);text-decoration:none}
+footer a:hover{color:var(--heading)}
+.navlinks{display:flex;align-items:center;gap:22px}
+.navlinks a:not(.btn){color:var(--body);text-decoration:none;font-size:15px}
+.navlinks a:not(.btn):hover{color:var(--heading)}
+header{position:sticky;top:0;z-index:10;background:rgba(8,18,15,.82);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+@media (max-width:640px){.navlinks a:not(.btn){display:none}}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+@media (max-width:860px){.grid3,.two{grid-template-columns:1fr}.hero{padding:44px 0 24px}section{padding:32px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
+<body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+        <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.4A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></symbol>
+        <symbol id="i-return" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 3.5l3.5 3.5-3.5 3.5"/><path d="M4 11V9.5A2.5 2.5 0 0 1 6.5 7H20"/><path d="M7.5 20.5L4 17l3.5-3.5"/><path d="M20 13v1.5a2.5 2.5 0 0 1-2.5 2.5H4"/></symbol>
+        <symbol id="i-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="3" width="15" height="18" rx="2.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+        <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+        <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17z"/><path d="M14.5 7.5l3 3"/></symbol>
+        <symbol id="i-beauty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="6.5" r="2.8"/><circle cx="6.5" cy="17.5" r="2.8"/><path d="M20 4.5L8.6 15.4M14.6 14.6L20 19.5M8.6 8.6L12 12"/></symbol>
+        <symbol id="i-food" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6.5a2 2 0 0 0 4 0V3M8 11.5V21"/><path d="M17 21V3c2 .6 3 2.6 3 6s-1 5-3 5"/></symbol>
+        <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12.5H6z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+        <symbol id="i-brief" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18"/></symbol>
+        <symbol id="i-health" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-8-5-8-10.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.7c0 5.8-8 10.8-8 10.8z"/><path d="M9 12h2l1-2 1.5 4 1-2H16"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.5a11 11 0 0 0 6.5 6.5l1.5-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></symbol>
+        <symbol id="i-more" viewBox="0 0 24 24" fill="currentColor"><circle cx="5.5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18.5" cy="12" r="1.6"/></symbol>
+    </defs></svg>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="BIYU AI Agency"><img src="/logo.png" alt=""><b>BIYU <span>AI</span></b></a>
+    <nav class="navlinks" aria-label="Main">
+      <a href="/work">Work</a>
+      <a href="/about">About</a>
+      <a class="btn ghost" href="#book" style="min-height:42px;padding:10px 16px;font-size:15px">Book a consultation</a>
+    </nav>
+  </div>
+</header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<main id="top">
+  <div class="hero">
+    <svg class="net" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g stroke="#BF8A40" stroke-width="1" fill="none">
+        <path d="M80 380 260 250 470 320 640 160 860 240 1040 110 1160 200"/>
+        <path d="M150 120 260 250 380 90 640 160 760 60 860 240 980 420"/>
+        <path d="M470 320 560 450 760 360 980 420 1100 330"/>
+      </g>
+      <g fill="#BF8A40">
+        <circle cx="80" cy="380" r="4"/><circle cx="260" cy="250" r="5"/><circle cx="470" cy="320" r="4"/><circle cx="640" cy="160" r="6"/>
+        <circle cx="860" cy="240" r="5"/><circle cx="1040" cy="110" r="4"/><circle cx="1160" cy="200" r="3"/><circle cx="150" cy="120" r="3"/>
+        <circle cx="380" cy="90" r="4"/><circle cx="760" cy="60" r="3"/><circle cx="980" cy="420" r="5"/><circle cx="560" cy="450" r="3"/>
+        <circle cx="760" cy="360" r="4"/><circle cx="1100" cy="330" r="3"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <span class="eyebrow pill">For small and growing businesses</span>
+      <h1>Find out where your business is losing time and customers. <em>Then fix it.</em></h1>
+      <p class="lead">Missed WhatsApp enquiries, customers who come once and never return, hours lost to admin. In 30 minutes, on a call or by WhatsApp chat, a BIYU consultant maps how the work happens today and shows you the smallest system that fixes it.</p>
+      <div class="price">
+        <a class="btn" href="#book">Book my consultation</a>
+        <span><strong>P250</strong> <small>&nbsp;30-minute one-on-one consultation</small></span>
+      </div>
+      <p class="guar"><svg aria-hidden="true"><use href="#i-shield"/></svg><span><b>Leave with a clear next step, or get your P250 back.</b> No forms, no arguments.</span></p>
+      <p style="margin:18px 0 0;font-size:15px"><a href="#leak">Not sure it's worth it? Work out what the problem costs you &rsaquo;</a></p>
+    </div>
+  </div>
+
+  <section id="leak">
+    <div class="wrap">
+      <div class="leak">
+        <div>
+          <span class="eyebrow">Do the maths</span>
+          <h2 class="h2">What is the problem costing you?</h2>
+          <p>Put in your own numbers. Most owners have never added this up.</p>
+          <div class="calc">
+            <label for="lostWeek">Customers or enquiries you lose in a normal week</label>
+            <div class="in"><input id="lostWeek" type="number" inputmode="numeric" min="0" max="500" value="3"><span>a week</span></div>
+            <label for="custValue">What one customer is usually worth to you</label>
+            <div class="in"><span>P</span><input id="custValue" type="number" inputmode="numeric" min="0" max="1000000" value="200"></div>
+          </div>
+        </div>
+        <div class="result" aria-live="polite">
+          <span class="eyebrow">Roughly</span>
+          <div class="big" id="leakMonth">P2,600</div>
+          <p>walks out of your business every month</p>
+          <p id="leakRatio" style="color:var(--heading)"></p>
+          <a class="btn pillbtn" href="#book" style="margin-top:14px">Find the leak in 30 minutes</a>
+          <small>An estimate from your numbers, not a promise. We check it with you in the consultation.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fit">
+    <div class="wrap">
+      <span class="eyebrow">Is this for you?</span>
+      <h2 class="h2">Right business, right problem</h2>
+      <div class="fit">
+        <div class="card yes">
+          <h3>Book if</h3>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>You run a small or growing business, in Botswana or anywhere else, and customers reach you by WhatsApp, phone or walk-in</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>You can name something that keeps going wrong: missed messages, no-shows, slow quotes, admin piling up</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>You want it fixed, not a lecture about technology</li>
+          </ul>
+        </div>
+        <div class="card no">
+          <h3>Probably not for you if</h3>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-x"/></svg>You want AI just to say you have AI</li>
+            <li><svg aria-hidden="true"><use href="#i-x"/></svg>You're not ready to change how any of the work is done</li>
+            <li><svg aria-hidden="true"><use href="#i-x"/></svg>You only want the cheapest possible website</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">How it works</span>
+      <h2 style="font-size:clamp(24px,3.4vw,34px);margin:10px 0 22px">From enquiry to a clear next step</h2>
+      <div class="grid3" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <div class="card"><span class="num">01</span><h3>Answer a few quick questions</h3><p>Tap your answers below. It takes about 60 seconds.</p></div>
+        <div class="card"><span class="num">02</span><h3>Pay P250</h3><p>We send you payment options by email and WhatsApp. In Botswana: Orange Money, MyZaka or bank transfer. Elsewhere: international payment options.</p></div>
+        <div class="card"><span class="num">03</span><h3>Meet your consultant</h3><p>Once payment is confirmed, you pick a time for a 30-minute call. Rather type? Do it by WhatsApp chat instead.</p></div>
+        <div class="card"><span class="num">04</span><h3>Know your next step</h3><p>You leave knowing where the leak is, what fixing it is worth and the simplest way to fix it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiers">
+    <div class="wrap">
+      <span class="eyebrow">Ways to work with us</span>
+      <h2 class="h2">Start small. Go further only when it makes sense.</h2>
+      <p class="intro">Each step stands on its own. You decide after each one whether to go further.</p>
+      <div class="ladder">
+        <div class="card rung main">
+          <span class="num">STEP 1 &middot; FIND THE LEAK</span>
+          <h3>Consultation</h3>
+          <div class="amt">P250 <small>30 minutes</small></div>
+          <p>One-on-one with a BIYU consultant, on a call or by WhatsApp chat. We cover:</p>
+          <ol>
+            <li>How the work happens today</li>
+            <li>Where it leaks, and what that costs you</li>
+            <li>The smallest fix, and what it would take</li>
+          </ol>
+          <p class="note" style="margin:0 0 16px;color:var(--gold-soft)">Clear next step, or your P250 back.</p>
+          <a class="btn" href="#book">Book a consultation</a>
+        </div>
+        <div class="card rung">
+          <span class="num">STEP 2 &middot; GET THE PLAN</span>
+          <h3>AI Roadmap</h3>
+          <div class="amt">P1,500</div>
+          <p>A written roadmap for your specific bottlenecks: which tools fit, in what order, and what each step takes. Yours to act on, with us or on your own.</p>
+          <p class="note">Offered after your consultation, if a roadmap is the right next step.</p>
+        </div>
+        <div class="card rung">
+          <span class="num">STEP 3 &middot; BUILD IT</span>
+          <h3>We set it up</h3>
+          <div class="amt">Quoted <small>after the roadmap</small></div>
+          <p>If you'd like us to build the fix, we quote a clear scope and price once we know exactly what's being built. You approve it before any work starts.</p>
+          <p class="note">No surprise costs. Nothing starts without your yes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guarantee" style="padding-top:0">
+    <div class="wrap">
+      <div class="guarbox">
+        <svg aria-hidden="true"><use href="#i-shield"/></svg>
+        <div>
+          <h3>Our promise: a clear next step, or your P250 back</h3>
+          <p>If you finish the consultation without a clear next step for your business, tell us within 7 days and we refund the full P250. No forms, no arguments. We'd rather earn your trust than keep a fee we didn't earn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap work">
+      <div>
+        <span class="eyebrow">Recent build</span>
+        <h2 class="h2">Burger's Tavern, Francistown</h2>
+        <p>A restaurant where customers already order and book on WhatsApp. We built around that instead of replacing it:</p>
+        <ul>
+          <li>Table requests that land straight in WhatsApp</li>
+          <li>A menu with a cart and ordering</li>
+          <li>Payment by Orange Money, MyZaka or Pay to Cell</li>
+        </ul>
+      </div>
+      <div class="card" style="text-align:center">
+        <p style="margin:0 0 14px">See it working</p>
+        <a class="btn ghost" href="https://burgers-tavern.vercel.app" target="_blank" rel="noopener">Open the site &rsaquo;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <div class="bookhead">
+        <span class="eyebrow">Book your consultation</span>
+        <h2>A few quick taps. About a minute.</h2>
+        <p>Tell us where it hurts. A BIYU consultant looks at the business problem first, and only then at the technology.</p>
+        <ul class="perks">
+          <li><svg><use href="#i-check"/></svg>Call or WhatsApp chat</li>
+          <li><svg><use href="#i-check"/></svg>No card needed here</li>
+          <li><svg><use href="#i-check"/></svg>Clear next step, or your P250 back</li>
+        </ul>
+      </div>
+
+      <div class="formshell">
+      <form class="sheet" id="enquiry" novalidate>
+        <div class="alert" id="formAlert" role="alert"></div>
+        <div id="formBody">
+          <div class="steptop"><span id="stepLabel" aria-live="polite">Step 1 of 5</span><span>About 60 seconds</span></div>
+          <div class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+          <div class="step on" data-step="1">
+            <h2 id="q1">What's costing you the most right now?</h2>
+            <p class="hint">Pick the one that hurts most.</p>
+            <div class="tiles" role="group" aria-labelledby="q1" data-key="problem_type">
+              <button type="button" class="tile" data-v="Missed WhatsApp or after-hours enquiries"><span class="ic" aria-hidden="true"><svg><use href="#i-chat"/></svg></span>Missed WhatsApp or after-hours enquiries</button>
+              <button type="button" class="tile" data-v="Customers come once and don't come back"><span class="ic" aria-hidden="true"><svg><use href="#i-return"/></svg></span>Customers come once and don't come back</button>
+              <button type="button" class="tile" data-v="Too much admin and paperwork"><span class="ic" aria-hidden="true"><svg><use href="#i-admin"/></svg></span>Too much admin and paperwork</button>
+              <button type="button" class="tile" data-v="Slow quotes and follow-ups"><span class="ic" aria-hidden="true"><svg><use href="#i-clock"/></svg></span>Slow quotes and follow-ups</button>
+              <button type="button" class="tile" data-v="Bookings, no-shows and scheduling"><span class="ic" aria-hidden="true"><svg><use href="#i-cal"/></svg></span>Bookings, no-shows and scheduling</button>
+              <button type="button" class="tile" data-v="Something else"><span class="ic" aria-hidden="true"><svg><use href="#i-pen"/></svg></span>Something else</button>
+            </div>
+            <div class="other field float" id="otherWrap">
+              <textarea id="problem_other" maxlength="600" placeholder=" "></textarea><label for="problem_other">Tell us in a sentence</label>
+              <div class="err">Please tell us a little more (at least 10 characters).</div>
+            </div>
+            <div class="stepErr" id="err1">Please choose one.</div>
+          </div>
+
+          <div class="step" data-step="2">
+            <h2 id="q2">What kind of business is it?</h2>
+            <p class="hint">So your consultant comes prepared.</p>
+            <div class="tiles" role="group" aria-labelledby="q2" data-key="industry">
+              <button type="button" class="tile" data-v="Beauty, spa or salon"><span class="ic" aria-hidden="true"><svg><use href="#i-beauty"/></svg></span>Beauty, spa or salon</button>
+              <button type="button" class="tile" data-v="Restaurant or café"><span class="ic" aria-hidden="true"><svg><use href="#i-food"/></svg></span>Restaurant or café</button>
+              <button type="button" class="tile" data-v="Retail or shop"><span class="ic" aria-hidden="true"><svg><use href="#i-bag"/></svg></span>Retail or shop</button>
+              <button type="button" class="tile" data-v="Professional services or consulting"><span class="ic" aria-hidden="true"><svg><use href="#i-brief"/></svg></span>Professional services</button>
+              <button type="button" class="tile" data-v="Health or clinic"><span class="ic" aria-hidden="true"><svg><use href="#i-health"/></svg></span>Health or clinic</button>
+              <button type="button" class="tile" data-v="Other"><span class="ic" aria-hidden="true"><svg><use href="#i-more"/></svg></span>Something else</button>
+            </div>
+            <div class="stepErr" id="err2">Please choose one.</div>
+          </div>
+
+          <div class="step" data-step="3">
+            <h2 id="q3">Where are you, and how do customers reach you?</h2>
+            <p class="hint">Tap one of each.</p>
+            <div class="sub" id="q3c">Country</div>
+            <div class="chips" role="group" aria-labelledby="q3c" data-key="country">
+              <button type="button" class="chip" data-v="Botswana">Botswana</button>
+              <button type="button" class="chip" data-v="South Africa">South Africa</button>
+              <button type="button" class="chip" data-v="Namibia">Namibia</button>
+              <button type="button" class="chip" data-v="Zambia">Zambia</button>
+              <button type="button" class="chip" data-v="Zimbabwe">Zimbabwe</button>
+              <button type="button" class="chip" data-v="Other">Somewhere else</button>
+            </div>
+            <div class="townrow" id="townRow">
+              <div class="sub" id="q3a">Town</div>
+              <div class="chips" role="group" aria-labelledby="q3a" data-key="town">
+                <button type="button" class="chip" data-v="Gaborone">Gaborone</button>
+                <button type="button" class="chip" data-v="Francistown">Francistown</button>
+                <button type="button" class="chip" data-v="Maun">Maun</button>
+                <button type="button" class="chip" data-v="Palapye">Palapye</button>
+                <button type="button" class="chip" data-v="Other">Somewhere else</button>
+              </div>
+            </div>
+            <div class="sub" id="q3b">Customers mostly reach you by</div>
+            <div class="chips" role="group" aria-labelledby="q3b" data-key="contact_channel">
+              <button type="button" class="chip" data-v="WhatsApp">WhatsApp</button>
+              <button type="button" class="chip" data-v="Phone calls">Phone calls</button>
+              <button type="button" class="chip" data-v="Walk-ins">Walk-ins</button>
+              <button type="button" class="chip" data-v="Facebook or Instagram">Facebook / Instagram</button>
+              <button type="button" class="chip" data-v="A mix of these">A mix</button>
+            </div>
+            <div class="stepErr" id="err3">Please choose your country, town and how customers reach you.</div>
+          </div>
+
+          <div class="step" data-step="4">
+            <h2 id="q4">How would you like your consultation?</h2>
+            <p class="hint">Same consultant, same questions. Pick what suits you.</p>
+            <div class="tiles two" role="group" aria-labelledby="q4" data-key="consult_mode">
+              <button type="button" class="tile" data-v="Call"><span class="ic" aria-hidden="true"><svg><use href="#i-phone"/></svg></span><span>On a call<small>30 minutes by phone or video, at a time you pick.</small></span></button>
+              <button type="button" class="tile" data-v="WhatsApp chat"><span class="ic" aria-hidden="true"><svg><use href="#i-chat"/></svg></span><span>By WhatsApp chat<small>Answer in your own time and get your summary in writing. No call needed.</small></span></button>
+            </div>
+            <div class="stepErr" id="err4">Please choose one.</div>
+          </div>
+
+          <div class="step" data-step="5">
+            <h2>Where should we send your booking details?</h2>
+            <p class="hint">We'll email the payment details and message you on WhatsApp.</p>
+            <div class="row2">
+              <div class="field float"><input id="name" autocomplete="name" placeholder=" "><label for="name">Your name</label><div class="err">Please enter your name.</div></div>
+              <div class="field float"><input id="business" autocomplete="organization" placeholder=" "><label for="business">Business name</label><div class="err">Please enter your business name.</div></div>
+            </div>
+            <div class="row2">
+              <div class="field float"><input id="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder=" "><label for="whatsapp">WhatsApp number</label><div class="err">Enter your WhatsApp number, e.g. 71 234 567, or with the country code, e.g. +27 82 123 4567.</div></div>
+              <div class="field float"><input id="email" type="email" autocomplete="email" placeholder=" "><label for="email">Email</label><div class="err">Please enter a valid email.</div></div>
+            </div>
+            <div class="field">
+              <label class="consent"><input type="checkbox" id="consent">
+                <span>BIYU AI Agency may use these details to arrange my consultation, as described in the <a href="/privacy" target="_blank">privacy policy</a>.</span></label>
+              <div class="err">Please tick the box so we can contact you.</div>
+            </div>
+            <div class="field">
+              <label class="consent"><input type="checkbox" id="optin">
+                <span>Also send me practical emails on growing my business. <span class="opt">Optional. Unsubscribe any time.</span></span></label>
+            </div>
+            <div class="summary" id="summary" aria-label="Your answers"></div>
+          </div>
+
+          <input type="text" id="company_site" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <div class="nav">
+            <button type="button" class="linkbtn" id="backBtn" hidden>&#8249;&nbsp; Back</button>
+            <button type="button" class="btn pillbtn" id="nextBtn">Continue</button>
+          </div>
+          <p class="formnote" id="payNote">You only pay once you've received our payment details.</p>
+        </div>
+
+        <div class="done" id="done" tabindex="-1">
+          <svg class="tick" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M25 41l10 10 20-21"/></svg>
+          <h2>You're in, <span id="doneName"></span>.</h2>
+          <p>Your reference is <span class="ref" id="doneRef"></span>. Use it as the payment reference.</p>
+          <p>We've emailed the P250 payment details to <b id="doneEmail" style="color:var(--heading)"></b>. A BIYU consultant will also message you on WhatsApp. <span id="doneMode"></span></p>
+          <p class="formnote" style="margin-top:4px">Leave with a clear next step, or get your P250 back.</p>
+          <div class="paylist" id="paylist"></div>
+          <p class="formnote">Didn't get the email? Check your spam folder, or contact us at <a href="mailto:info.biyu.ai@gmail.com">info.biyu.ai@gmail.com</a>.</p>
+        </div>
+      </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap" style="max-width:820px">
+      <span class="eyebrow">Questions</span>
+      <h2 style="font-size:clamp(24px,3.4vw,32px);margin:10px 0 18px">Before you book</h2>
+      <details><summary>Why do you charge for the consultation?</summary><p>The consultation takes real time to prepare and deliver. Charging a small fee means every consultant gives your business their full attention.</p></details>
+      <details><summary>How long is it, and where does it happen?</summary><p>30 minutes on a phone or video call, at a time you choose once payment is confirmed. Rather not talk? Choose WhatsApp chat on the form: you answer the same questions in your own time and get your summary in writing.</p></details>
+      <details><summary>What if it doesn't help?</summary><p>If you finish the consultation without a clear next step for your business, tell us within 7 days and we refund the full P250. No forms, no arguments.</p></details>
+      <details><summary>We're not in Botswana. Can we still book?</summary><p>Yes. Consultations happen by call or WhatsApp, so it works wherever you are. Outside Botswana we send you international payment options.</p></details>
+      <details><summary>Do I have to buy anything afterwards?</summary><p>No. If a written roadmap or a build would help, we explain the options and the price, and you decide. There's no pressure either way.</p></details>
+      <details><summary>What if AI isn't the answer for my business?</summary><p>Then we'll tell you. Sometimes the fix is a simpler process, a WhatsApp template or a change in who does what. We'd rather recommend the smallest thing that works than sell you technology you don't need.</p></details>
+      <details><summary>Is this only for big companies?</summary><p>No. We work with small and mid-sized businesses in Botswana and beyond, from salons and restaurants to consultancies and print shops.</p></details>
+      <details id="privacy"><summary>What do you do with my details?</summary><p>We use them only to arrange and deliver your consultation. If you tick the optional box, we'll also send you occasional emails, and every email has an unsubscribe link. We don't sell or share your details. You can ask us to delete them at any time by emailing info.biyu.ai@gmail.com. This follows Botswana's Data Protection Act, 2024. Full details: <a href="/privacy">Privacy &amp; Terms</a>.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>&copy; 2026 BIYU AI Agency (Pty) Ltd · Gaborone · Francistown</span>
+  <nav aria-label="Footer"><a href="/work">Work</a><a href="/about">About</a><a href="/privacy">Privacy &amp; Terms</a><a href="mailto:info.biyu.ai@gmail.com">info.biyu.ai@gmail.com</a></nav></div></footer>
+
+<script>
+// ---- Settings: fill in the payment details before going live. Empty values are hidden. ----
+const CONFIG = {
+  webhookUrl: "https://n8n-dfxs.srv1906672.hstgr.cloud/webhook/biyu-consultation",
+  price: "P250",
+  payments: [
+    { method: "Orange Money", detail: "" },
+    { method: "MyZaka", detail: "" },
+    { method: "Bank transfer (EFT)", detail: "" }
+  ]
+};
+
+(function () {
+  const $ = id => document.getElementById(id);
+  const form = $("enquiry"), alertBox = $("formAlert"), next = $("nextBtn"), back = $("backBtn");
+  const steps = [...form.querySelectorAll(".step")];
+  const TOTAL = steps.length;
+  const answers = { problem_type: "", industry: "", country: "", town: "", contact_channel: "", consult_mode: "", interest: "Consultation (P250)" };
+  const DIAL = { "Botswana": "267", "South Africa": "27", "Namibia": "264", "Zambia": "260", "Zimbabwe": "263" };
+  const step3Done = () => answers.country && answers.contact_channel && (answers.country !== "Botswana" || answers.town);
+  let cur = 1;
+
+  const params = new URLSearchParams(location.search);
+  const tracking = {
+    utm_source: params.get("utm_source") || "", utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || "", utm_content: params.get("utm_content") || "",
+    fbclid: params.get("fbclid") || "", landing_url: location.origin + location.pathname, referrer: document.referrer || ""
+  };
+  if (params.get("tier")) answers.interest = params.get("tier");
+
+  // Tier buttons set what the person is interested in
+  document.querySelectorAll("[data-interest]").forEach(a => a.addEventListener("click", () => { answers.interest = a.dataset.interest; }));
+
+  // Tiles and chips: single choice per group
+  form.querySelectorAll("[data-key]").forEach(group => {
+    const key = group.dataset.key;
+    group.querySelectorAll("button").forEach(b => {
+      b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", () => {
+        group.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+        answers[key] = b.dataset.v;
+        if (key === "problem_type") $("otherWrap").classList.toggle("on", b.dataset.v === "Something else");
+        if (key === "country") {
+          const bw = b.dataset.v === "Botswana";
+          $("townRow").classList.toggle("on", bw);
+          if (!bw) { answers.town = ""; $("townRow").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", "false")); }
+        }
+        // Auto-advance once a step is complete
+        const autoNext = key === "industry" || key === "consult_mode" || (key === "problem_type" && b.dataset.v !== "Something else");
+        if (autoNext) setTimeout(() => go(1), 180);
+        else if (key === "country" || key === "town" || key === "contact_channel") { if (step3Done()) setTimeout(() => go(1), 180); }
+        else if (b.dataset.v === "Something else") $("problem_other").focus();
+      });
+    });
+  });
+
+  function show(n, dir) {
+    cur = n;
+    steps.forEach(s => { const on = +s.dataset.step === n; s.classList.toggle("on", on); s.classList.toggle("rev", on && dir < 0); });
+    $("stepLabel").textContent = "Step " + n + " of " + TOTAL;
+    form.querySelectorAll(".segs i").forEach((s, i) => s.classList.toggle("on", i < n));
+    back.hidden = n === 1;
+    next.textContent = n === TOTAL ? "Book my consultation" : "Continue";
+    $("payNote").style.display = n === TOTAL ? "block" : "none";
+    form.querySelectorAll(".stepErr").forEach(e => e.classList.remove("on"));
+    if (n === TOTAL) { renderSummary(); setTimeout(() => $("name").focus({ preventScroll: true }), 350); }
+  }
+
+  function stepOk(n) {
+    if (n === 1) {
+      if (!answers.problem_type) return fail("err1");
+      if (answers.problem_type === "Something else") {
+        const ok = $("problem_other").value.trim().length >= 10;
+        $("otherWrap").classList.toggle("bad", !ok);
+        if (!ok) { $("problem_other").focus(); return false; }
+      }
+    }
+    if (n === 2 && !answers.industry) return fail("err2");
+    if (n === 3 && !step3Done()) return fail("err3");
+    if (n === 4 && !answers.consult_mode) return fail("err4");
+    return true;
+  }
+  function fail(id) { $(id).classList.add("on"); return false; }
+
+  function go(dir) {
+    if (dir > 0 && !stepOk(cur)) return;
+    if (dir > 0 && cur === TOTAL) return submit();
+    show(Math.min(TOTAL, Math.max(1, cur + dir)), dir);
+    const top = form.getBoundingClientRect().top;
+    if (top < 0 || top > innerHeight * 0.4) form.scrollIntoView({ block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+  next.addEventListener("click", () => go(1));
+  back.addEventListener("click", () => go(-1));
+  form.addEventListener("submit", e => { e.preventDefault(); go(1); });
+
+  function renderSummary() {
+    const s = $("summary"); s.textContent = "";
+    [answers.consult_mode === "WhatsApp chat" ? "WhatsApp chat" : "30-min call", answers.problem_type === "Something else" ? "Other problem" : answers.problem_type, answers.industry, answers.town || answers.country]
+      .filter(Boolean).forEach(t => { const el = document.createElement("span"); el.textContent = t; s.appendChild(el); });
+  }
+
+  // WhatsApp number -> international format (+countrycode...). Local numbers use the chosen country's code.
+  const toIntl = v => {
+    let d = v.replace(/[^\d+]/g, "");
+    if (d.startsWith("00")) d = "+" + d.slice(2);
+    if (d.startsWith("+")) return /^\+[1-9]\d{7,14}$/.test(d) ? d : null;
+    const code = DIAL[answers.country];
+    if (!code) return null; // outside the listed countries, ask for the + code
+    if (d.startsWith(code) && d.length > code.length + 6) d = d.slice(code.length);
+    d = d.replace(/^0+/, "");
+    if (code === "267") return /^[2-9]\d{6,7}$/.test(d) ? "+267" + d : null;
+    return /^\d{7,11}$/.test(d) ? "+" + code + d : null;
+  };
+  const checks = {
+    name: v => v.trim().length >= 2, business: v => v.trim().length >= 2,
+    whatsapp: v => !!toIntl(v), email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())
+  };
+  function validateContact() {
+    let first = null;
+    for (const [id, ok] of Object.entries(checks)) {
+      const el = $(id), good = ok(el.value);
+      el.closest(".field").classList.toggle("bad", !good);
+      el.setAttribute("aria-invalid", good ? "false" : "true");
+      if (!good && !first) first = el;
+    }
+    const c = $("consent");
+    c.closest(".field").classList.toggle("bad", !c.checked);
+    if (!c.checked && !first) first = c;
+    if (first) first.focus();
+    return !first;
+  }
+  form.addEventListener("input", e => { const f = e.target.closest(".field"); if (f && f.classList.contains("bad")) { if (cur === TOTAL) validateContact(); else stepOk(cur); } });
+
+  const makeRef = () => "BIYU-" + new Date().toISOString().slice(2, 10).replace(/-/g, "") + "-" +
+    Math.random().toString(36).slice(2, 6).toUpperCase();
+
+  async function submit() {
+    alertBox.style.display = "none";
+    if ($("company_site").value) return; // bot trap
+    if (!validateContact()) return;
+    const v = id => $(id).value.trim();
+    const problem = answers.problem_type === "Something else" ? v("problem_other") : answers.problem_type;
+    const payload = {
+      reference: makeRef(), name: v("name"), business: v("business"), whatsapp: toIntl(v("whatsapp")),
+      email: v("email").toLowerCase(), industry: answers.industry, country: answers.country, town: answers.town || answers.country, problem,
+      problem_type: answers.problem_type, contact_channel: answers.contact_channel, consult_mode: answers.consult_mode, interest: answers.interest,
+      payment_method: "", consent: true, marketing_opt_in: $("optin").checked,
+      leak_estimate: window.BIYU_LEAK || null,
+      price: CONFIG.price, submitted_at: new Date().toISOString(), ...tracking
+    };
+    next.disabled = true; next.textContent = "Sending…";
+    try {
+      const res = await fetch(CONFIG.webhookUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      if (window.fbq) fbq("track", "Lead", { value: 250, currency: "BWP" });
+      showDone(payload);
+    } catch (err) {
+      alertBox.innerHTML = "We couldn't send your enquiry just now. Please try again, or email us at <a href='mailto:info.biyu.ai@gmail.com'>info.biyu.ai@gmail.com</a>.";
+      alertBox.style.display = "block";
+      next.disabled = false; next.textContent = "Book my consultation";
+    }
+  }
+
+  function showDone(p) {
+    $("formBody").style.display = "none";
+    $("doneName").textContent = p.name.split(" ")[0];
+    $("doneRef").textContent = p.reference;
+    $("doneEmail").textContent = p.email;
+    $("doneMode").textContent = p.consult_mode === "WhatsApp chat"
+      ? "Once payment is confirmed, your consultant starts your consultation by WhatsApp chat."
+      : "Once payment is confirmed, you pick a time for your 30-minute call.";
+    const bw = p.country === "Botswana";
+    const list = $("paylist");
+    CONFIG.payments.filter(x => x.detail && (bw || x.method.startsWith("Bank"))).forEach(x => {
+      const d = document.createElement("div"); d.className = "pay";
+      d.innerHTML = "<b></b><br><span></span>";
+      d.querySelector("b").textContent = x.method;
+      d.querySelector("span").textContent = x.detail;
+      list.appendChild(d);
+    });
+    const done = $("done");
+    done.classList.add("on"); done.focus({ preventScroll: true });
+    form.scrollIntoView({ block: "start" });
+  }
+
+  show(1, 1);
+})();
+
+// Leak calculator: the owner's own numbers, shown as a rough monthly figure
+(function () {
+  const w = document.getElementById("lostWeek"), v = document.getElementById("custValue");
+  const out = document.getElementById("leakMonth"), ratio = document.getElementById("leakRatio");
+  const fmt = n => "P" + Math.round(n).toLocaleString("en-GB");
+  function calc() {
+    const lost = Math.max(0, Math.min(500, +w.value || 0)), val = Math.max(0, Math.min(1e6, +v.value || 0));
+    const month = lost * val * 52 / 12;
+    out.textContent = fmt(month);
+    const x = month / 250;
+    ratio.textContent = x >= 2 ? "That's about " + Math.floor(x) + " times the cost of the consultation." : "";
+    window.BIYU_LEAK = month > 0 ? { lost_per_week: lost, customer_value: val, monthly_estimate: Math.round(month) } : null;
+  }
+  w.addEventListener("input", calc); v.addEventListener("input", calc); calc();
+})();
+</script>
+</body>
 </html>

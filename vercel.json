@@ -1,3 +1,14 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/services", "destination": "/#tiers", "permanent": true },
+    { "source": "/portfolio", "destination": "/work", "permanent": true },
+    { "source": "/testimonials", "destination": "/work", "permanent": true },
+    { "source": "/contact", "destination": "/#book", "permanent": true },
+    { "source": "/faq", "destination": "/#faq", "permanent": true },
+    { "source": "/terms", "destination": "/privacy#terms", "permanent": true },
+    { "source": "/apply", "destination": "/", "permanent": false },
+    { "source": "/index", "destination": "/", "permanent": true }
+  ]
 }
