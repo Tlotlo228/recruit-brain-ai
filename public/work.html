@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Our Work | BIYU AI Agency</title>
-<meta name="description" content="Systems BIYU AI Agency has built for small businesses: WhatsApp ordering, booking and rebooking reminders, enquiry follow-up and monthly results reports.">
+<meta name="description" content="Live demos of systems BIYU AI Agency has built, and our AI mentees in their own words.">
 <meta name="theme-color" content="#08120F">
 <link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
+<a href="#main" class="skip">Skip to content</a>
 <header>
   <div class="wrap bar">
     <a class="brand" href="/" aria-label="BIYU AI Agency home"><img src="/logo.png" alt=""><b>BIYU <span>AI</span></b></a>
@@ -24,58 +25,43 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <div class="pagehead">
     <div class="wrap">
       <span class="eyebrow">Our work</span>
       <h1>Real systems for real businesses</h1>
-      <p>Each one started with a problem the owner could name. We only name clients who've said we can. The rest are described without their names.</p>
+      <p>Each one started with a problem the owner could name. Open any of them and try it yourself. We only name clients who've said we can.</p>
     </div>
   </div>
 
-  <section>
+  <section class="stories" aria-labelledby="demos-h">
     <div class="wrap">
-      <div class="card" style="padding:32px">
-        <span class="num">RESTAURANT · FRANCISTOWN</span>
-        <h2 class="h2" style="margin-top:12px">Burger's Tavern</h2>
-        <p style="max-width:680px">Their customers already ordered and booked on WhatsApp. So instead of replacing WhatsApp, we built the website around it.</p>
-        <ul class="dots">
-          <li>Table requests that land straight in the restaurant's WhatsApp</li>
-          <li>A menu with a cart, so orders arrive complete and easy to read</li>
-          <li>Payment by Orange Money, MyZaka or Pay to Cell</li>
-          <li>Installs on a phone like an app</li>
-        </ul>
-        <p style="margin-top:22px"><a class="btn ghost" href="https://burgers-tavern.vercel.app" target="_blank" rel="noopener">See the live site &rsaquo;</a></p>
+      <div class="head">
+        <span class="eyebrow">Live demos</span>
+        <h2 class="h2" id="demos-h">What we've built</h2>
       </div>
+      <div class="stage" data-stories="demos">
+        <div class="storycard" aria-live="polite"></div>
+        <div class="collage"></div>
+      </div>
+      <div class="pills" role="tablist" aria-label="Choose a demo"></div>
+      <p class="hint">Use ← → to move between demos</p>
     </div>
   </section>
 
-  <section>
+  <section class="stories" aria-labelledby="mentor-h">
     <div class="wrap">
-      <span class="eyebrow">Other builds</span>
-      <h2 class="h2">The problem, and what we built</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="num">GLOW SPOT BW · BEAUTY STUDIO, GABORONE</span>
-          <h3 style="margin-top:10px">Clients came once and didn't come back</h3>
-          <p>A booking website, a QR check-in at the front desk, and a reminder email three weeks after each visit with a one-tap button to book again. Every return visit is tracked, so the owner can see what the reminders bring back.</p>
-          <ul class="tags"><li>Booking</li><li>QR check-in</li><li>Rebook reminders</li></ul>
-          <p style="margin:16px 0 0"><a href="https://glowspotbw.vercel.app" target="_blank" rel="noopener">See the live site &rsaquo;</a></p>
-        </div>
-        <div class="card">
-          <span class="num">CRĒO CONSULTANCY · STUDY ABROAD</span>
-          <h3 style="margin-top:10px">Enquiries went cold before anyone replied</h3>
-          <p>A website with an enquiry form that replies instantly, sends follow-up emails, and gives the owner a daily list of one-tap WhatsApp messages for leads that haven't booked yet.</p>
-          <ul class="tags"><li>Instant replies</li><li>Follow-up</li><li>WhatsApp nudges</li></ul>
-          <p style="margin:16px 0 0"><a href="https://creoconsultancy.org" target="_blank" rel="noopener">See the live site &rsaquo;</a></p>
-        </div>
-        <div class="card">
-          <span class="num">BEAUTY &amp; WELLNESS</span>
-          <h3 style="margin-top:10px">Bookings were scattered across calls and chats</h3>
-          <p>Booking websites for salons and spas, so customers can see services and book a slot without a long back-and-forth.</p>
-          <ul class="tags"><li>Booking websites</li></ul>
-        </div>
+      <div class="head">
+        <span class="eyebrow">AI mentorship</span>
+        <h2 class="h2" id="mentor-h">Our mentees, in their own words</h2>
+        <p style="max-width:640px;margin:0">Alongside client work, our founder Tlotlo Johane mentors people on how to use AI in their work and studies. These are mentees, not paying clients, and they agreed to share their videos here.</p>
       </div>
+      <div class="stage" data-stories="mentees">
+        <div class="storycard" aria-live="polite"></div>
+        <div class="collage"></div>
+      </div>
+      <div class="pills" role="tablist" aria-label="Choose a mentee"></div>
+      <p class="hint">Use ← → to move between mentees</p>
     </div>
   </section>
 
@@ -102,10 +88,141 @@
 
 <footer>
   <div class="wrap">
-    <span>&copy; <span id="yr">2026</span> BIYU AI Agency (Pty) Ltd · Gaborone · Francistown</span>
+    <span>&copy; <span id="yr">2026</span> BIYU AI Agency (Pty) Ltd · CIPA BW00009940055 · Gaborone · Francistown</span>
     <nav aria-label="Footer"><a href="/">Home</a><a href="/work">Work</a><a href="/about">About</a><a href="/privacy">Privacy &amp; Terms</a><a href="mailto:info.biyu.ai@gmail.com">info.biyu.ai@gmail.com</a></nav>
   </div>
 </footer>
-<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+const DATA = {
+  demos: [
+    { key: "BURGERS", meta: "Restaurant · Francistown · Client", name: "Burgers Tarven", org: "burgers-tavern.vercel.app",
+      text: "Their customers already ordered and booked on WhatsApp. So instead of replacing WhatsApp, we built the website around it.",
+      built: "Table requests that land in the restaurant's WhatsApp, a menu with a cart, payment by Orange Money, MyZaka or Pay to Cell, and it installs on a phone like an app.",
+      url: "https://burgers-tavern.vercel.app", feat: "/media/demo-burgers.jpg", floats: [["/media/demo-burgers-m.jpg", "On a phone", 1]] },
+    { key: "GLOW SPOT", meta: "Beauty studio · Gaborone · Client", name: "Glow Spot BW", org: "glowspotbw.vercel.app",
+      text: "Clients came once and didn't come back. Now every visit starts a simple return loop.",
+      built: "A booking website, a QR check-in at the front desk, and a reminder email three weeks after each visit with one tap to book again. Every return visit is tracked.",
+      url: "https://glowspotbw.vercel.app", feat: "/media/demo-glowspot.jpg", floats: [["/media/demo-glowspot-m.jpg", "On a phone", 1]] },
+    { key: "CRĒO", meta: "Study abroad & recruitment · Client", name: "Crēo Consultancy", org: "creoconsultancy.org",
+      text: "Enquiries went cold before anyone replied. Now every enquiry gets an answer straight away.",
+      built: "A website with an enquiry form that replies instantly, sends follow-up emails, and gives the owner a daily list of one-tap WhatsApp messages for leads who haven't booked yet.",
+      url: "https://creoconsultancy.org", feat: "/media/demo-creo.jpg", floats: [] },
+    { key: "ACE-IT", meta: "Recruitment platform · Botswana · Client project", name: "ACE-IT Botswana Connect", org: "ace-bots.lovable.app",
+      text: "A recruitment platform where candidates upload a CV and AI fills in their profile for them to check.",
+      built: "AI CV reading for PDF, Word and scanned CVs, a candidate profile they review before saving, and employer access to applicants and their CVs.",
+      url: "https://ace-bots.lovable.app", feat: "/media/demo-aceit.jpg", floats: [] },
+    { key: "REFRESHING", meta: "Massage & beauty · Francistown · Demo", name: "Refreshing Parlour", org: "Demo, not yet a client",
+      text: "A parlour with no website or booking system. We built a demo to show the owner what it could look like.",
+      built: "Services and prices on one page, and booking that goes straight to the parlour's WhatsApp.",
+      url: "https://refreshing-parlour.vercel.app", feat: "/media/demo-refreshing.jpg", floats: [["/media/demo-refreshing-m.jpg", "On a phone", 1]] },
+    { key: "CEDA PORTAL", meta: "Our own build · Hackathon entry · Nov 2026", name: "Innovation Portal", org: "Built by BIYU for the CEDA Innovation Hackathon",
+      text: "A prototype for submitting, scoring and tracking innovation applications fairly.",
+      built: "Four roles, blind scoring, revision rounds, reports and an audit trail, with a privacy and data-protection page.",
+      url: "https://biyu-innovation-portal.vercel.app", feat: "/media/demo-ceda.jpg", floats: [["/media/demo-ceda-m.jpg", "On a phone", 1]] }
+  ],
+  mentees: [
+    { key: "PRECIOUS", meta: "AI mentorship · Botswana · 2026", name: "Precious", org: "Mentee",
+      text: "Precious took part in BIYU's AI mentorship, learning how to use AI tools in her day-to-day work.",
+      built: "Press play to hear her experience in her own words.",
+      video: "/media/precious.mp4", poster: "/media/precious-1.jpg", tall: true,
+      floats: [["/media/precious-2.jpg", "Precious"], ["/media/precious-3.jpg", "In her words"], ["/media/precious-4.jpg", "AI mentorship"]] },
+    { key: "MEMORY", meta: "AI mentorship · Botswana · 2026", name: "Memory", org: "Mentee",
+      text: "Memory took part in BIYU's AI mentorship, learning how to use AI tools in her day-to-day work.",
+      built: "Press play to hear her experience in her own words.",
+      video: "/media/memory.mp4", poster: "/media/memory-1.jpg", tall: true,
+      floats: [["/media/memory-2.jpg", "Memory"], ["/media/memory-3.jpg", "In her words"], ["/media/memory-4.jpg", "AI mentorship"]] },
+    { key: "KONDANANI", meta: "AI mentorship · Botswana · 2026", name: "Kondanani Banda", org: "Mentee",
+      text: "Kondanani took part in BIYU's AI mentorship, learning how to use AI tools in his day-to-day work.",
+      built: "Press play to hear his experience in his own words.",
+      video: "/media/kondanani.mp4", poster: "/media/kondanani-1.jpg", tall: false,
+      floats: [["/media/kondanani-2.jpg", "Kondanani"], ["/media/kondanani-3.jpg", "In his words"], ["/media/kondanani-4.jpg", "AI mentorship"]] }
+  ]
+};
+
+(function () {
+  const pad = n => String(n).padStart(2, "0");
+  const el = (tag, attrs = {}, text) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (text != null) e.textContent = text; return e; };
+  const PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
+
+  document.querySelectorAll("[data-stories]").forEach(stage => {
+    const kind = stage.dataset.stories, items = DATA[kind];
+    const card = stage.querySelector(".storycard"), collage = stage.querySelector(".collage");
+    const section = stage.closest("section"), pills = section.querySelector(".pills");
+    let cur = 0;
+
+    items.forEach((it, i) => {
+      const b = el("button", { type: "button", class: "pill", role: "tab", "aria-selected": "false" });
+      b.innerHTML = "<b>" + pad(i + 1) + "</b>";
+      b.appendChild(document.createTextNode(it.key));
+      b.addEventListener("click", () => show(i));
+      pills.appendChild(b);
+    });
+
+    function show(i) {
+      cur = (i + items.length) % items.length;
+      const it = items[cur];
+      pills.querySelectorAll(".pill").forEach((p, j) => p.setAttribute("aria-selected", String(j === cur)));
+      // story card
+      card.textContent = "";
+      card.classList.remove("swap"); void card.offsetWidth; card.classList.add("swap");
+      card.appendChild(el("div", { class: "count" }, pad(cur + 1) + " / " + pad(items.length)));
+      card.appendChild(el("div", { class: "meta" }, it.meta));
+      card.appendChild(el("h3", {}, it.name));
+      card.appendChild(el("div", { class: "org" }, it.org));
+      card.appendChild(el("p", {}, it.text));
+      const built = el("p", { class: "built" });
+      if (it.video) built.textContent = it.built;
+      else { built.appendChild(el("b", {}, "What we built: ")); built.appendChild(document.createTextNode(it.built)); }
+      card.appendChild(built);
+      if (it.url) {
+        const a = el("a", { class: "cta", href: it.url, target: "_blank", rel: "noopener" });
+        a.innerHTML = '<span class="dot">↗</span>';
+        a.appendChild(document.createTextNode("Open the live demo"));
+        card.appendChild(a);
+      }
+      // collage
+      collage.textContent = "";
+      collage.className = "collage" + (it.tall ? " tall" : "");
+      const slots = ["f1", "f2", "f3", "f4"];
+      (it.floats || []).forEach((f, j) => {
+        const fl = el("div", { class: "float swap " + slots[j] + (f[2] ? " f-m" : "") });
+        fl.appendChild(el("img", { src: f[0], alt: "", loading: "lazy" }));
+        fl.appendChild(el("span", {}, f[1]));
+        collage.appendChild(fl);
+      });
+      const feat = el("div", { class: "feat" + (it.tall ? " tall" : "") });
+      if (it.video) {
+        const v = el("video", { src: it.video, poster: it.poster, preload: "none", playsinline: "", controls: "" });
+        v.setAttribute("aria-label", it.name + "'s video about BIYU's AI mentorship");
+        v.removeAttribute("controls");
+        const btn = el("button", { type: "button", class: "play", "aria-label": "Play " + it.name + "'s video" });
+        btn.innerHTML = PLAY;
+        btn.addEventListener("click", () => { v.setAttribute("controls", ""); btn.remove(); v.play(); });
+        feat.appendChild(v); feat.appendChild(btn);
+      } else {
+        const a = el("a", { href: it.url, target: "_blank", rel: "noopener", "aria-label": "Open the " + it.name + " live demo" });
+        a.appendChild(el("img", { src: it.feat, alt: "Screenshot of the " + it.name + " website" }));
+        feat.appendChild(a);
+        feat.appendChild(el("span", { class: "label" }, it.name));
+      }
+      collage.appendChild(feat);
+      section.querySelectorAll("video").forEach(v => { if (!collage.contains(v)) v.pause(); });
+    }
+
+    // arrow keys while the section is on screen
+    let inView = false;
+    new IntersectionObserver(es => { inView = es[0].isIntersecting && es[0].intersectionRatio > 0.5; }, { threshold: [0, 0.5, 1] }).observe(stage);
+    document.addEventListener("keydown", e => {
+      if (!inView || /input|textarea|select/i.test(document.activeElement.tagName)) return;
+      if (e.key === "ArrowRight") { show(cur + 1); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { show(cur - 1); e.preventDefault(); }
+    });
+    show(0);
+  });
+})();
+</script>
 </body>
 </html>
